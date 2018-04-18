@@ -1,6 +1,8 @@
 
-<html><head>
-<title>ŸoË«Ä£¼ÆÆ÷</title>
+<html>
+<meta charset=UTF-8"/>
+<head>
+<title>ç„¡åŒæ¨¡è®¡å™¨</title>
 <link rel="stylesheet" href="css/jquery-ui.min.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
@@ -119,729 +121,729 @@ shime = 0;
 
 function buki_init(buki){
 	switch(buki){
-		case "ÙÈÔÂµ¶":
+		case "åƒæœˆåˆ€":
 		base = new Array(49,37,35,170,140,110,135);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,23,29,21,31,0,0);
 		slot = new Array(3,2,5,1,6);
 		hosei = 12;
-		motion = "15*N+©e";
+		motion = "15*N+ã€†";
 		offset1 = 6+12-1;
 		offset2 = 1;
 		kankaku = 30;
 		shime = 20;
 		break;
-		case "´ó¸«":
+		case "å¤§æ–§":
 		base = new Array(44,44,34,170,145,115,125);
 		qhhc = new Array(20,13,18,8,18,0,0);
 		<!--qhhc = new Array("+20","+13","+18","+8","+18",0,0);-->
 		up   = new Array(21,14,23,32,35,0,0);
 		slot = new Array(2,1,3,6,5);
 		hosei = 10;
-		motion = "15*N+©e";
+		motion = "15*N+ã€†";
 		offset1 = 5+10-1;
 		offset2 = 1;
 		kankaku = 28;
 		shime = 20;
 		break;
-		case "Ëé°ô":
+		case "ç¢æ£’":
 		base = new Array(46,55,42,200,120,100,120);
 		qhhc = new Array(10,40,20,30,20,0,0);
 		up   = new Array(23,36,16,38,18,0,0);
 		slot = new Array(3,5,1,6,2);
 		hosei = 15;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ìú±Ş":
+		case "é“é­":
 		base = new Array(45,49,35,190,140,110,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(31,21,16,27,34,0,0);
 		slot = new Array(5,2,1,3,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÆÓµ¶":
+		case "æœ´åˆ€":
 		base = new Array(44,39,31,170,155,125,150);
 		qhhc = new Array(20,25,20,10,20,0,0);
 		up   = new Array(31,26,30,24,8,0,0);
 		slot = new Array(5,3,6,2,1);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 10-1;
 		offset2 = 0;
 		kankaku = 49;
 		shime = "15+20";
 		break;
-		case "¼×µ¶":
+		case "ç”²åˆ€":
 		base = new Array(46,37,35,160,145,130,150);
 		qhhc = new Array(20,25,15,20,0,4,0);
 		up   = new Array(25,31,15,14,35,0,0);
 		slot = new Array(3,5,1,2,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ëé¹÷":
+		case "ç¢æ£":
 		base = new Array(41,45,30,160,140,120,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,21,30,22,31,0,0);
 		slot = new Array(3,1,5,2,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«±Ş":
+		case "åŒé­":
 		base = new Array(46,40,34,180,135,110,135);
 		qhhc = new Array(25,35,0,30,20,2,0);
 		up   = new Array(30,31,22,29,15,0,0);
 		slot = new Array(5,6,2,3,1);
 		hosei = 15;
-		motion = "(17+17)*N+©e";
+		motion = "(17+17)*N+ã€†";
 		offset1 = 3-1;
 		offset2 = 0;
 		kankaku = 46;
 		shime = "20+15+20";
 		break;
-		case "Õ½¸«":
+		case "æˆ˜æ–§":
 		base = new Array(52,45,36,160,140,100,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(22,23,27,29,24,0,0);
 		slot = new Array(1,3,5,6,2);
 		hosei = 13;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 7-1;
 		offset2 = 0;
 		kankaku = 56;
 		shime = 20;
 		break;
-		case "Ë«êª":
+		case "åŒæˆŸ":
 		base = new Array(45,47,33,180,120,100,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(28,30,20,26,23,0,0);
 		slot = new Array(5,6,1,2,3);
 		hosei = 16;
-		motion = "(12+12)*N+©e";
+		motion = "(12+12)*N+ã€†";
 		offset1 = 8-5;
 		offset2 = 0;
 		kankaku = 48;
 		shime = 12;
 		break;
-		case "Ë«½£":
+		case "åŒå‰‘":
 		base = new Array(40,29,25,140,150,140,155);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,18,28,15,31,0,0);
 		slot = new Array(3,2,5,1,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«´¸":
+		case "åŒé”¤":
 		base = new Array(41,37,31,150,170,135,155);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(29,15,25,34,20,0,0);
 		slot = new Array(5,1,3,6,2);
 		hosei = 10;
-		motion = "18*N+©e";
+		motion = "18*N+ã€†";
 		offset1 = 5+43-1;
 		offset2 = 1;
 		kankaku = 36;
 		shime = "20";
 		break;
-		case "Ö±Ç¹":
+		case "ç›´æª":
 		base = new Array(46,34,28,160,165,115,145);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,20,31,30,18,0,0);
 		slot = new Array(2,3,5,6,1);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "³¤¹÷":
+		case "é•¿æ£":
 		base = new Array(45,29,28,150,150,125,150);
 		qhhc = new Array(15,20,25,10,20,3,0);
 		up   = new Array(24,31,21,31,18,0,0);
 		slot = new Array(2,5,3,6,1);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ó£ÉÈ":
+		case "æ¨±æ‰‡":
 		base = new Array(42,34,30,140,160,130,150);
 		qhhc = new Array(15,20,0,40,30,5,0);
 		up   = new Array(29,18,20,19,35,0,0);
 		slot = new Array(5,3,2,1,6);
 		hosei = 10;
-		motion = "15*N+©e";
+		motion = "15*N+ã€†";
 		offset1 = 10+30-1;
 		offset2 = 1;
 		kankaku = 41;
 		shime = "20";
 		break;
-		case "ÑàÉÈ":
+		case "ç‡•æ‰‡":
 		base = new Array(41,32,23,140,165,115,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(26,32,31,9,25,0,0);
 		slot = new Array(3,6,5,1,2);
 		hosei = 16;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "»ÃÕÈ":
+		case "å¹»æ–":
 		base = new Array(44,32,28,160,175,120,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(33,23,18,30,21,0,0);
 		slot = new Array(6,3,1,5,2);
 		hosei = 10;
-		motion = "12*N+©e";
+		motion = "12*N+ã€†";
 		offset1 = 12+27-8;
 		offset2 = 1;
 		kankaku = 30;
 		shime = "20";
 		break;
-		case "·¨ÕÈ":
+		case "æ³•æ–":
 		base = new Array(43,37,28,170,160,125,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(34,29,25,22,15,0,0);
 		slot = new Array(6,5,3,2,1);
 		hosei = 15;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ìú¹³":
+		case "é“é’©":
 		base = new Array(40,37,30,140,165,140,160);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,29,35,15,15,0,0);
 		slot = new Array(3,5,6,2,1);
 		hosei = 10;
-		motion = "(12+12)*N+©e";
+		motion = "(12+12)*N+ã€†";
 		offset1 = 8-8;
 		offset2 = 0;
 		kankaku = 80;
 		shime = 17;
 		break;
-		case "ÂùÈ­":
+		case "è›®æ‹³":
 		base = new Array(49,52,36,190,120,100,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,23,33,25,27,0,0);
 		slot = new Array(3,1,6,2,5);
 		hosei = 11;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ìú½£":
+		case "é“å‰‘":
 		base = new Array(41,42,28,150,155,130,155);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(28,23,23,26,17,0,0);
 		slot = new Array(6,3,2,5,1);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Óüµ¶":
+		case "ç‹±åˆ€":
 		base = new Array(46,47,42,190,130,110,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,35,17,17,31,0,0);
 		slot = new Array(3,5,2,1,6);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 9-1;
 		offset2 = 0;
 		kankaku = 50;
 		shime = "15+15+20";
 		break;
-		case "Õ½ÅÌ":
+		case "æˆ˜ç›˜":
 		base = new Array(49,55,35,190,120,110,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,23,35,29,22,0,0);
 		slot = new Array(1,3,6,5,2);
 		hosei = 13;
-		motion = "(13+13)*N+©e";
+		motion = "(13+13)*N+ã€†";
 		offset1 = 20-17;
 		offset2 = 0;
 		kankaku = 53;
 		shime = 17;
 		break;
-		case "¶à½Ú±Ş":
+		case "å¤šèŠ‚é­":
 		base = new Array(47,29,28,140,150,140,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(19,35,22,29,16,0,0);
 		slot = new Array(3,6,2,5,1);
 		hosei = 10;
-		motion = "(8+8)*N+©e";
+		motion = "(8+8)*N+ã€†";
 		offset1 = 5-2;
 		offset2 = 0;
 		kankaku = 25;
 		shime = "15";
 		break;
-		case "³¤Ë«µ¶":
+		case "é•¿åŒåˆ€":
 		base = new Array(49,37,30,170,140,120,135);
 		qhhc = new Array(20,30,10,20,30,0,0);
 		up   = new Array(24,20,20,34,34,0,0);
 		slot = new Array(3,1,2,5,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "¹³Á­µ¶":
+		case "é’©é•°åˆ€":
 		base = new Array(44,44,29,160,145,115,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(30,22,23,35,16,0,0);
 		slot = new Array(5,2,3,6,1);
 		hosei = 12;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 8-1;
 		offset2 = 0;
 		kankaku = 53;
 		shime = 20;
 		break;
-		case "±¦½£":
+		case "å®å‰‘":
 		base = new Array(46,55,42,160,120,125,120);
 		qhhc = new Array(20,25,20,20,0,5,0);
 		up   = new Array(21,21,35,27,19,0,0);
 		slot = new Array(2,3,6,5,1);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 9-1;
 		offset2 = 0;
 		kankaku = 50;
 		shime = 20;
 		break;
-		case "ÌúÇ¹":
+		case "é“æª":
 		base = new Array(45,49,35,160,140,120,130);
 		qhhc = new Array(15,0,20,20,40,5,0);
 		up   = new Array(23,18,30,33,21,0,0);
 		slot = new Array(3,1,5,6,2);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«½Ú¹÷":
+		case "åŒèŠ‚æ£":
 		base = new Array(44,39,31,150,155,125,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(19,25,29,19,31,0,0);
 		slot = new Array(2,3,5,1,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÏÄ‡ü":
+		case "å¤åœ":
 		base = new Array(46,37,29,140,145,135,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(30,23,29,19,33,0,0);
 		slot = new Array(5,2,3,1,6);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 6-1;
 		offset2 = 0;
 		kankaku = 48;
 		shime = "20";
 		break;
-		case "ÌúÃ¬":
+		case "é“çŸ›":
 		base = new Array(44,40,32,180,130,115,120);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(24,33,18,28,20,0,0);
 		slot = new Array(3,6,1,5,2);
 		hosei = 16;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 11-1;
 		offset2 = 0;
 		kankaku = 49;
 		shime = "15+20";
 		break;
-		case "Õ¶Âíµ¶":
+		case "æ–©é©¬åˆ€":
 		base = new Array(46,45,30,170,135,120,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,32,30,17,24,0,0);
 		slot = new Array(2,6,5,1,3);
 		hosei = 16;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÓğÉÈ":
+		case "ç¾½æ‰‡":
 		base = new Array(46,33,27,140,170,120,135);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(25,22,28,30,20,0,0);
 		slot = new Array(3,2,5,6,1);
 		hosei = 12;
-		motion = "(12+12)*N+©e";
+		motion = "(12+12)*N+ã€†";
 		offset1 = 30-21;
 		offset2 = 0;
 		kankaku = 52;
 		shime = "12+12+12+12";
 		break;
-		case "Í¶»¡ÈĞ":
+		case "æŠ•å¼§åˆƒ":
 		base = new Array(47,44,28,150,140,130,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(28,22,22,35,17,0,0);
 		slot = new Array(5,3,2,6,1);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "»ıÈĞ½£":
+		case "ç§¯åˆƒå‰‘":
 		base = new Array(42,41,25,160,130,125,125);
 		qhhc = new Array(20,0,20,30,20,5,0);
 		up   = new Array(22,16,32,20,29,0,0);
 		slot = new Array(3,1,6,2,5);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 9-1;
 		offset2 = 0;
 		kankaku = 49;
 		shime = 20;
 		break;
-		case "½«½£":
+		case "å°†å‰‘":
 		base = new Array(45,43,32,170,150,125,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,24,19,30,32,0,0);
 		slot = new Array(2,3,1,5,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "»¡µ¶":
+		case "å¼§åˆ€":
 		base = new Array(45,38,32,150,140,120,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(25,21,20,36,17,0,0);
 		slot = new Array(5,3,2,6,1);
 		hosei = 10;
-		motion = "(12+12)*N+©e";
+		motion = "(12+12)*N+ã€†";
 		offset1 = 5-1;
 		offset2 = 0;
 		kankaku = 30;
 		shime = "16";
 		break;
-		case "Ğı¹÷":
+		case "æ—‹æ£":
 		base = new Array(50,40,25,170,150,125,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,24,31,20,28,0,0);
 		slot = new Array(2,3,6,1,5);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 5-1;
 		offset2 = 0;
 		kankaku = 54;
 		shime = 20;
 		break;
-		case "ÑÀ±Ú":
+		case "ç‰™å£":
 		base = new Array(42,48,42,180,135,110,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,21,35,28,22,0,0);
 		slot = new Array(3,1,6,5,2);
 		hosei = 11;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÅÌµ¶":
+		case "ç›˜åˆ€":
 		base = new Array(47,50,26,190,130,120,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(29,23,27,36,16,0,0);
 		slot = new Array(5,2,3,6,1);
 		hosei = 12;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Õ½¸ê":
+		case "æˆ˜æˆˆ":
 		base = new Array(48,38,35,160,150,125,130);
 		qhhc = new Array(20,30,10,0,30,5,0);
 		up   = new Array(30,20,26,22,32,0,0);
 		slot = new Array(5,1,3,2,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÌúµÑ":
+		case "é“ç¬›":
 		base = new Array(44,43,34,150,160,130,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(22,21,31,26,33,0,0);
 		slot = new Array(2,1,5,3,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«ÈĞ½£":
+		case "åŒåˆƒå‰‘":
 		base = new Array(47,45,35,160,165,130,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,32,25,19,34,0,0);
 		slot = new Array(2,5,3,1,6);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 12-7;
 		offset2 = 0;
 		kankaku = 51;
 		shime = 20;
 		break;
-		case "¼â½£":
+		case "å°–å‰‘":
 		base = new Array(48,35,32,170,140,135,140);
 		qhhc = new Array(11,8,11,13,13,4,0);
 		up   = new Array(32,16,33,21,23,0,0);
 		slot = new Array(5,1,6,2,3);
 		hosei = 10;
-		motion = "(14+14)*N+©e";
+		motion = "(14+14)*N+ã€†";
 		offset1 = 17-9;
 		offset2 = 0;
 		kankaku = 50;
 		shime = "14+14+14+14+18";
 		break;
-		case "Öä·û":
+		case "å’’ç¬¦":
 		base = new Array(43,50,40,160,140,120,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(27,22,15,18,24,0,0);
 		slot = new Array(6,3,1,2,5);
 		hosei = 13;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Èı¼âÇ¹":
+		case "ä¸‰å°–æª":
 		base = new Array(45,39,30,170,160,120,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(25,24,34,21,32,0,0);
 		slot = new Array(3,2,6,1,5);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "²æÍ»Ã¬":
+		case "å‰çªçŸ›":
 		base = new Array(46,40,40,170,150,120,135);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(22,20,30,34,25,0,0);
 		slot = new Array(2,1,5,6,3);
 		hosei = 11;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "¶Ïêª":
+		case "æ–­æˆŸ":
 		base = new Array(47,38,40,180,140,120,130);
 		qhhc = new Array(20,25,10,20,30,0,0);
 		up   = new Array(24,16,31,26,31,0,0);
 		slot = new Array(3,1,5,2,6);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 9-1;
 		offset2 = 0;
 		kankaku = 44;
 		shime = "15+20";
 		break;
-		case "ÑÀ½£":
+		case "ç‰™å‰‘":
 		base = new Array(47,40,32,170,140,130,140);
 		qhhc = new Array(15,10,15,20,30,4,0);
 		up   = new Array(24,31,22,33,15,0,0);
 		slot = new Array(3,5,2,6,1);
 		hosei = 12;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 9-1;
 		offset2 = 0;
 		kankaku = 49;
 		shime = 15;
 		break;
-		case "ÌÒÉÈ":
+		case "æ¡ƒæ‰‡":
 		base = new Array(45,42,40,150,160,135,160);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(24,20,33,23,28,0,0);
 		slot = new Array(3,1,6,2,5);
 		hosei = 10;
-		motion = "15*N+©e";
+		motion = "15*N+ã€†";
 		offset1 = 17+12-1;
 		offset2 = 1;
 		kankaku = 16;
 		shime = 20;
 		break;
-		case "Ìúêª":
+		case "é“æˆŸ":
 		base = new Array(48,50,25,180,140,105,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(25,24,31,29,18,0,0);
 		slot = new Array(3,2,6,5,1);
 		hosei = 12;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "÷ë½Çµ¶":
+		case "éºŸè§’åˆ€":
 		base = new Array(48,39,28,160,145,125,145);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(32,18,20,27,33,0,0);
 		slot = new Array(5,1,2,3,6);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 9+24-1;
 		offset2 = 1;
 		kankaku = 31;
 		shime = 20;
 		break;		
-		case "´©ÈĞ":
+		case "ç©¿åˆƒ":
 		base = new Array(47,41,27,140,160,140,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(25,33,17,36,21,0,0);
 		slot = new Array(3,5,1,6,2);
 		hosei = 10;
-		motion = "(4+4)*N+©e";
+		motion = "(4+4)*N+ã€†";
 		offset1 = 8-2;
 		offset2 = 0;
 		kankaku = 12;
 		shime = 15;
 		break;
-		case "ÀÇÑÀ°ô":
+		case "ç‹¼ç‰™æ£’":
 		base = new Array(48,38,34,170,150,110,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(30,32,27,23,16,0,0);
 		slot = new Array(5,6,3,2,1);
 		hosei = 12;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Éß½£":
+		case "è›‡å‰‘":
 		base = new Array(48,46,26,160,140,120,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(32,18,24,33,23,0,0);
 		slot = new Array(5,1,3,6,2);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 13-1;
 		offset2 = 0;
 		kankaku = 50;
 		shime = "15+20";
 		break;
-		case "¾Ş½£":
+		case "å·¨å‰‘":
 		base = new Array(49,35,30,180,160,120,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,33,34,29,15,0,0);
 		slot = new Array(2,5,6,3,1);
 		hosei = 16;
-		motion = "15*N+©e";
+		motion = "15*N+ã€†";
 		offset1 = 15+35+20-2;
 		offset2 = 2;
 		kankaku = 17;
 		shime = 15;
 		break;
-		case "Ï¸½£":
+		case "ç»†å‰‘":
 		base = new Array(47,41,32,150,150,130,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(24,22,31,20,34,0,0);
 		slot = new Array(3,2,5,1,6);
 		hosei = 10;
-		motion = "(8+8)*N+©e";
+		motion = "(8+8)*N+ã€†";
 		offset1 = 9-3;
 		offset2 = 0;
 		kankaku = 16;
 		shime = 15;
 		break;
-		case "ÖØÊÖ¼×":
+		case "é‡æ‰‹ç”²":
 		base = new Array(50,42,40,180,120,115,120);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,33,31,28,23,0,0);
 		slot = new Array(1,6,5,3,2);
 		hosei = 11;
-		motion = "4*N+©e";
+		motion = "4*N+ã€†";
 		offset1 = 23;
 		offset2 = 0;
 		kankaku = 5;
 		shime = "4+20";
 		break;
-		case "ÁúÑÀ¹³":
+		case "é¾™ç‰™é’©":
 		base = new Array(47,43,35,170,135,125,140);
 		qhhc = new Array(0,25,10,30,40,5,0);
 		up   = new Array(33,35,27,21,18,0,0);
 		slot = new Array(6,5,3,2,1);
 		hosei = 10;
-		motion = "(15+15)*N+©e";
+		motion = "(15+15)*N+ã€†";
 		offset1 = 17-14;
 		offset2 = 0;
 		kankaku = 64;
 		shime = "20";
 		break;
-		case "¶éÂä":
+		case "å •è½":
 		base = new Array(49,43,33,150,145,130,145);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(24,23,18,33,29,0,0);
 		slot = new Array(2,3,1,6,5);
 		hosei = 10;
-		motion = "(1+1)*N+©e";
+		motion = "(1+1)*N+ã€†";
 		offset1 = 13-5;
 		offset2 = 0;
 		kankaku = 32;
 		shime = "1";
 		break;
-		case "ïÚ":
-		motion = "Î´ÑéÖ¤";
+		case "é•–":
+		motion = "æœªéªŒè¯";
 		base = new Array(45,29,38,150,145,130,155);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(26,16,16,30,24,0,0);
@@ -852,553 +854,553 @@ function buki_init(buki){
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÇàÁúµ¶":
+		case "é’é¾™åˆ€":
 		base = new Array(43,41,40,170,140,125,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(24,23,29,20,31,0,0);
 		slot = new Array(3,2,5,1,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÂİĞıÇ¹":
+		case "èºæ—‹æª":
 		base = new Array(46,38,29,180,120,110,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,24,34,30,19,0,0);
 		slot = new Array(2,3,6,5,1);
 		hosei = 13;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "À×ÃùÇ¹":
+		case "é›·é¸£æª":
 		base = new Array(46,47,39,180,135,125,145);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,22,20,30,32,0,0);
 		slot = new Array(1,3,2,5,6);
 		hosei = 10;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "»ğÑæ‡ü":
+		case "ç«ç„°åœ":
 		base = new Array(45,50,37,160,140,130,155);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,20,34,21,27,0,0);
 		slot = new Array(3,1,6,2,5);
 		hosei = 12;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "·ÉÏè½£":
+		case "é£ç¿”å‰‘":
 		base = new Array(44,48,35,170,130,120,140);
 		qhhc = new Array(15,18,0,18,28,5,0);
 		up   = new Array(29,22,30,19,21,0,0);
 		slot = new Array(5,2,6,1,3);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÁúÉÈ":
+		case "é¾™æ‰‡":
 		base = new Array(42,39,35,140,140,115,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(26,21,18,28,29,0,0);
 		slot = new Array(6,2,1,3,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«îá":
+		case "åŒé’º":
 		base = new Array(47,45,32,180,130,110,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(24,23,32,20,29,0,0);
 		slot = new Array(3,2,6,1,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ºìÁúµ¶":
+		case "çº¢é¾™åˆ€":
 		base = new Array(53,49,36,160,120,125,135);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(31,16,23,31,18,0,0);
 		slot = new Array(6,1,3,5,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-   		case "³¤¹­":
+   		case "é•¿å¼“":
 		base = new Array(47,41,30,150,150,115,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(22,34,19,32,8,0,0);
 		slot = new Array(3,5,2,6,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-                case "·ÉÀö×¦":
+                case "é£ä¸½çˆª":
 		base = new Array(46,33,34,150,160,135,160);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(26,20,26,31,19,0,0);
 		slot = new Array(5,1,3,6,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "´óîá":
+		case "å¤§é’º":
 		base = new Array(45,40,36,205,135,110,135);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,33,31,28,11,0,0);
 		slot = new Array(2,6,5,3,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "´òÇò¹÷":
+		case "æ‰“çƒæ£":
 		base = new Array(45,40,35,150,150,120,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(29,23,22,35,18,0,0);
 		slot = new Array(5,2,3,6,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«Áú½£":
+		case "åŒé¾™å‰‘":
 		base = new Array(46,47,30,160,130,130,160);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,36,19,30,25,0,0);
 		slot = new Array(3,6,1,5,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ò°Ì«µ¶":
+		case "é‡å¤ªåˆ€":
 		base = new Array(44,45,32,170,140,125,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(32,20,19,27,33,0,0);
 		slot = new Array(5,1,2,3,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "´òË«±Ş":
+		case "æ‰“åŒé­":
 		base = new Array(47,49,30,180,125,105,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,19,31,30,25,0,0);
 		slot = new Array(2,1,6,5,3);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ğı»÷¹÷":
+		case "æ—‹å‡»æ£":
 		base = new Array(45,47,26,170,140,120,135);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(19,31,37,23,23,0,0);
 		slot = new Array(1,5,6,2,3);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "÷è÷ëµ¶":
+		case "éº’éºŸåˆ€":
 		base = new Array(49,37,32,180,130,115,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,22,19,31,32,0,0);
 		slot = new Array(3,2,1,5,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "»÷½£":
+		case "å‡»å‰‘":
 		base = new Array(40,40,35,160,125,130,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(21,33,24,30,17,0,0);
 		slot = new Array(2,6,3,5,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÔÂÏã±Ş":
+		case "æœˆé¦™é­":
 		base = new Array(50,52,36,150,140,135,155);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,24,32,21,26,0,0);
 		slot = new Array(2,3,6,1,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "·½Ììêª":
+		case "æ–¹å¤©æˆŸ":
 		base = new Array(49,55,35,190,120,110,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(29,22,23,33,16,0,0);
 		slot = new Array(5,3,2,6,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÌúÖÛ":
+		case "é“èˆŸ":
 		base = new Array(47,53,32,200,130,105,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,35,29,25,10,0,0);
 		slot = new Array(3,6,5,2,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÌúÉÈ":
+		case "é“æ‰‡":
 		base = new Array(43,45,40,160,150,135,160);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(22,32,19,29,35,0,0);
 		slot = new Array(2,5,1,3,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«ÕÈ":
+		case "åŒæ–":
 		base = new Array(47,43,29,150,140,125,145);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,15,22,31,33,0,0);
 		slot = new Array(2,1,3,6,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ºìÁ«µÑ":
+		case "çº¢è²ç¬›":
 		base = new Array(41,37,33,150,165,135,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(26,32,31,9,25,0,0);
 		slot = new Array(3,6,5,1,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "²¨¶·¹÷":
+		case "æ³¢æ–—æ£":
 		base = new Array(46,47,42,160,130,125,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(30,18,21,26,33,0,0);
 		slot = new Array(5,1,2,3,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ĞıÈĞÅÌ":
+		case "æ—‹åˆƒç›˜":
 		base = new Array(47,38,28,160,140,130,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,22,33,21,31,0,0);
 		slot = new Array(3,2,6,1,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "´Ì½£":
+		case "åˆºå‰‘":
 		base = new Array(44,47,40,170,130,120,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(22,20,35,28,17,0,0);
 		slot = new Array(2,3,6,5,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "±Ê¼Ü²æ":
+		case "ç¬”æ¶å‰":
 		base = new Array(44,33,39,150,150,130,150);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(28,15,28,23,28,0,0);
 		slot = new Array(6,1,3,2,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "¶Ìêª":
+		case "çŸ­æˆŸ":
 		base = new Array(45,40,35,180,140,120,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(25,23,31,34,15,0,0);
 		slot = new Array(3,2,5,6,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "³¤µ¶":
+		case "é•¿åˆ€":
 		base = new Array(47,40,38,190,130,105,125);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(32,20,21,27,32,0,0);
 		slot = new Array(5,1,2,3,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÎıÕÈ":
+		case "é”¡æ–":
 		base = new Array(42,38,42,160,160,115,130);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(20,23,22,32,31,0,0);
 		slot = new Array(1,3,2,5,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "´òµ¶":
+		case "æ‰“åˆ€":
 		base = new Array(44,42,32,155,150,125,140);
 		qhhc = new Array(0,0,0,0,0,0,0);
 		up   = new Array(23,32,34,18,21,0,0);
 		slot = new Array(2,5,6,1,3);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "¶ÏÔÂÈĞ":
+		case "æ–­æœˆåˆƒ":
 		base = new Array(41,48,37,180,125,105,135);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(31,21,16,34,23,0,0);
 		slot = new Array(5,2,1,6,3);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ñ¸À×½£":
+		case "è¿…é›·å‰‘":
 		base = new Array(42,45,33,150,150,125,150);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(29,18,20,19,35,0,0);
 		slot = new Array(5,3,2,1,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Á¬åóÅÚ":
+		case "è¿å¼©ç‚®":
 		base = new Array(46,41,27,150,130,110,140);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(19,35,22,17,29,0,0);
 		slot = new Array(3,6,2,1,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÁúÇ¹":
+		case "é¾™æª":
 		base = new Array(39,38,31,160,145,125,150);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(23,33,34,29,15,0,0);
 		slot = new Array(2,5,6,3,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "À£°ô":
+		case "æºƒæ£’":
 		base = new Array(49,55,35,190,130,100,135);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(31,18,23,31,16,0,0);
 		slot = new Array(6,2,3,5,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "µ¼·û":
+		case "å¯¼ç¬¦":
 		base = new Array(47,49,38,140,170,115,145);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(23,18,30,33,21,0,0);
 		slot = new Array(3,1,5,6,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "·Éµ¶":
+		case "é£åˆ€":
 		base = new Array(46,47,27,190,120,130,140);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(26,18,22,28,34,0,0);
 		slot = new Array(3,1,2,5,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÊÖ¸«":
+		case "æ‰‹æ–§":
 		base = new Array(45,52,33,200,120,110,140);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(22,23,27,21,34,0,0);
 		slot = new Array(1,3,5,2,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "´ó½£":
+		case "å¤§å‰‘":
 		base = new Array(51,48,37,160,130,110,120);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(35,21,16,27,31,0,0);
 		slot = new Array(6,2,1,3,5);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ë«Õ¶½£":
+		case "åŒæ–©å‰‘":
 		base = new Array(49,52,36,190,120,135,125);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(23,23,33,25,27,0,0);
 		slot = new Array(2,5,3,1,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ê®×Öêª":
+		case "åå­—æˆŸ":
 		base = new Array(48,45,21,170,130,125,130);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(38,33,17,23,21,0,0);
 		slot = new Array(6,5,1,3,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Á½ÈĞÇ¹":
+		case "ä¸¤åˆƒæª":
 		base = new Array(45,52,45,150,140,130,140);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(23,32,36,33,27,0,0);
 		slot = new Array(1,3,6,5,2);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "ÈĞåó":
+		case "åˆƒå¼©":
 		base = new Array(54,43,42,135,150,130,150);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(30,22,34,26,38,0,0);
 		slot = new Array(3,2,5,1,6);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
 		shime = "";
 		break;
-		case "Ø°Ê×":
+		case "åŒ•é¦–":
 		base = new Array(57,49,23,120,170,140,130);
 		qhhc = new Array(15,10,15,10,10,10,0);
 		up   = new Array(40,32,20,37,17,0,0);
 		slot = new Array(6,3,2,5,1);
 		hosei = 0;
-		motion = "Î´ÑéÖ¤";
+		motion = "æœªéªŒè¯";
 		offset1 = 0;
 		offset2 = 0;
 		kankaku = 0;
@@ -1572,156 +1574,156 @@ function calc1()	{
 	
 	for(i=0;i<5;i++){
 		switch(document.frm.kai[i].value){
-		case "¼ò¸ÄG»ù´¡":
+		case "ç®€æ”¹GåŸºç¡€":
 			base[0] += 4;
 			base[2] -= 4;			
 			break;
-		case "¼ò¸ÄP»ù´¡":
+		case "ç®€æ”¹PåŸºç¡€":
 			base[1] += 6;
 			base[2] -= 4;			
 			break;
-		case "¼ò¸ÄF»ù´¡":
+		case "ç®€æ”¹FåŸºç¡€":
 			base[0] -= 2;
 			base[1] -= 4;	
 			base[2] += 4;			
 			break;
-		case "¼ò¸ÄT»ù´¡":
+		case "ç®€æ”¹TåŸºç¡€":
 			base[3] += 8;
 			base[4] -= 8;			
 			break;
-		case "¼ò¸ÄW»ù´¡":
+		case "ç®€æ”¹WåŸºç¡€":
 			base[3] -= 8;
 			base[4] += 8;			
 			break;
-		case "¼ò¸ÄÒÆ¶¯":
+		case "ç®€æ”¹ç§»åŠ¨":
 			base[0] -= 2;
 			base[1] -= 2;
 			base[2] -= 2;
 			base[5] += 2;
 			base[6] -= 2;			
 			break;
-		case "¼ò¸ÄÌøÔ¾":
+		case "ç®€æ”¹è·³è·ƒ":
 			base[5] -= 1;
 			base[6] += 2;			
 			break;
-		case "Õæ¸ÄG»ù´¡":
+		case "çœŸæ”¹GåŸºç¡€":
 			base[0] += 4;
 			base[2] -= 2;			
 			break;
-		case "Õæ¸ÄP»ù´¡":
+		case "çœŸæ”¹PåŸºç¡€":
 			base[1] += 6;
 			base[2] -= 2;			
 			break;
-		case "Õæ¸ÄF»ù´¡":
+		case "çœŸæ”¹FåŸºç¡€":
 			base[0] -= 1;
 			base[1] -= 2;	
 			base[2] += 4;			
 			break;
-		case "Õæ¸ÄT»ù´¡":
+		case "çœŸæ”¹TåŸºç¡€":
 			base[3] += 8;
 			base[4] -= 4;			
 			break;
-		case "Õæ¸ÄW»ù´¡":
+		case "çœŸæ”¹WåŸºç¡€":
 			base[3] -= 4;
 			base[4] += 8;			
 			break;
-		case "Õæ¸ÄÒÆ¶¯":
+		case "çœŸæ”¹ç§»åŠ¨":
 			base[0] -= 1;
 			base[1] -= 1;
 			base[2] -= 1;
 			base[5] += 2;
 			base[6] -= 1;			
 			break;
-		case "Õæ¸ÄÌøÔ¾":
+		case "çœŸæ”¹è·³è·ƒ":
 			base[3] -= 2;
 			base[4] -= 2;
 			base[6] += 2;			
 			break;
-		case "¼ò¸ÄGÉÏÉı":
+		case "ç®€æ”¹Gä¸Šå‡":
 			up[0] += 5;
 			up[1] -= 2;
 			up[2] -= 2;
 			up[3] -= 2;
 			up[4] -= 2;			
 			break;
-		case "¼ò¸ÄPÉÏÉı":
+		case "ç®€æ”¹Pä¸Šå‡":
 			up[0] -= 2;
 			up[1] += 8;
 			up[2] -= 2;
 			up[3] -= 2;
 			up[4] -= 2;			
 			break;
-		case "¼ò¸ÄFÉÏÉı":
+		case "ç®€æ”¹Fä¸Šå‡":
 			up[0] -= 2;
 			up[1] -= 2;
 			up[2] += 5;
 			up[3] -= 2;
 			up[4] -= 2;		
 			break;
-		case "¼ò¸ÄTÉÏÉı":
+		case "ç®€æ”¹Tä¸Šå‡":
 			up[0] -= 2;
 			up[1] -= 2;
 			up[2] -= 2;
 			up[3] += 10;
 			up[4] -= 2;			
 			break;
-		case "¼ò¸ÄWÉÏÉı":
+		case "ç®€æ”¹Wä¸Šå‡":
 			up[0] -= 2;
 			up[1] -= 2;
 			up[2] -= 2;
 			up[3] -= 2;
 			up[4] += 10;			
 			break;
-		case "Õæ¸ÄGÉÏÉı":
+		case "çœŸæ”¹Gä¸Šå‡":
 			up[0] += 5;
 			up[1] -= 1;
 			up[2] -= 1;
 			up[3] -= 1;
 			up[4] -= 1;		
 			break;
-		case "Õæ¸ÄPÉÏÉı":
+		case "çœŸæ”¹Pä¸Šå‡":
 			up[0] -= 1;
 			up[1] += 8;
 			up[2] -= 1;
 			up[3] -= 1;
 			up[4] -= 1;			
 			break;
-		case "Õæ¸ÄFÉÏÉı":
+		case "çœŸæ”¹Fä¸Šå‡":
 			up[0] -= 1;
 			up[1] -= 1;
 			up[2] += 5;
 			up[3] -= 1;
 			up[4] -= 1;	
 			break;
-		case "Õæ¸ÄTÉÏÉı":
+		case "çœŸæ”¹Tä¸Šå‡":
 			up[0] -= 1;
 			up[1] -= 1;
 			up[2] -= 1;
 			up[3] += 10;
 			up[4] -= 1;		
 			break;
-		case "Õæ¸ÄWÉÏÉı":
+		case "çœŸæ”¹Wä¸Šå‡":
 			up[0] -= 1;
 			up[1] -= 1;
 			up[2] -= 1;
 			up[3] -= 1;
 			up[4] += 10;			
 			break;
-		case "¼ò¸Ä¶ÍÁ¶ÉÏÏŞ":
+		case "ç®€æ”¹é”»ç‚¼ä¸Šé™":
 			base[0] -= 2;
 			base[1] -= 3;
 			base[2] -= 2;
 			base[3] -= 4;
 			base[4] -= 4;			
 			break;
-		case "Õæ¸Ä¶ÍÁ¶ÉÏÏŞ":
+		case "çœŸæ”¹é”»ç‚¼ä¸Šé™":
 			base[0] -= 1;
 			base[1] -= 2;
 			base[2] -= 1;
 			base[3] -= 2;
 			base[4] -= 2;			
 			break;
-		case "¼ò¸Ä¿ÌÓ¡":
+		case "ç®€æ”¹åˆ»å°":
 			base[0] -= 1;
 			base[1] -= 2;
 			base[2] -= 1;
@@ -1752,7 +1754,7 @@ function calc1()	{
 	waku = 0;
 	for(i=0;i<5;i++){
 		waku += (num[i] + 1) * num[i] / 2;
-		if(document.frm.kai[i].value == "¼ò¸Ä¶ÍÁ¶ÉÏÏŞ" || document.frm.kai[i].value == "Õæ¸Ä¶ÍÁ¶ÉÏÏŞ")
+		if(document.frm.kai[i].value == "ç®€æ”¹é”»ç‚¼ä¸Šé™" || document.frm.kai[i].value == "çœŸæ”¹é”»ç‚¼ä¸Šé™")
 		waku2 += 1; 
 	}
 	document.frm.waku.value = waku +"/"+ waku2;
@@ -1851,8 +1853,8 @@ function toku_reset(){
  
 function kkk(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄG»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹GåŸºç¡€";
 			break;
 		}
 	}
@@ -1861,8 +1863,8 @@ function kkk(){
  
 function kkh(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄP»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹PåŸºç¡€";
 			break;
 		}
 	}
@@ -1871,8 +1873,8 @@ function kkh(){
  
 function kkb(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄF»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹FåŸºç¡€";
 			break;
 		}
 	}
@@ -1881,8 +1883,8 @@ function kkb(){
  
 function kkt(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄT»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹TåŸºç¡€";
 			break;
 		}
 	}
@@ -1891,8 +1893,8 @@ function kkt(){
  
 function kkm(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄW»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹WåŸºç¡€";
 			break;
 		}
 	}
@@ -1901,8 +1903,8 @@ function kkm(){
  
 function kki(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄÒÆ¶¯";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹ç§»åŠ¨";
 			break;
 		}
 	}
@@ -1911,8 +1913,8 @@ function kki(){
  
 function kkj(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄÌøÔ¾";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹è·³è·ƒ";
 			break;
 		}
 	}
@@ -1921,8 +1923,8 @@ function kkj(){
  
 function hkk(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄG»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹GåŸºç¡€";
 			break;
 		}
 	}
@@ -1931,8 +1933,8 @@ function hkk(){
  
 function hkh(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄP»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹PåŸºç¡€";
 			break;
 		}
 	}
@@ -1941,8 +1943,8 @@ function hkh(){
  
 function hkb(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄF»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹FåŸºç¡€";
 			break;
 		}
 	}
@@ -1951,8 +1953,8 @@ function hkb(){
  
 function hkt(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄT»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹TåŸºç¡€";
 			break;
 		}
 	}
@@ -1961,8 +1963,8 @@ function hkt(){
  
 function hkm(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄW»ù´¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹WåŸºç¡€";
 			break;
 		}
 	}
@@ -1971,8 +1973,8 @@ function hkm(){
  
 function hki(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄÒÆ¶¯";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹ç§»åŠ¨";
 			break;
 		}
 	}
@@ -1981,8 +1983,8 @@ function hki(){
  
 function hkj(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄÌøÔ¾";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹è·³è·ƒ";
 			break;
 		}
 	}
@@ -1991,8 +1993,8 @@ function hkj(){
  
 function kjk(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄGÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹Gä¸Šå‡";
 			break;
 		}
 	}
@@ -2001,8 +2003,8 @@ function kjk(){
  
 function kjh(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄPÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹Pä¸Šå‡";
 			break;
 		}
 	}
@@ -2011,8 +2013,8 @@ function kjh(){
  
 function kjb(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄFÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹Fä¸Šå‡";
 			break;
 		}
 	}
@@ -2021,8 +2023,8 @@ function kjb(){
  
 function kjt(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄTÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹Tä¸Šå‡";
 			break;
 		}
 	}
@@ -2031,8 +2033,8 @@ function kjt(){
  
 function kjm(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸ÄWÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹Wä¸Šå‡";
 			break;
 		}
 	}
@@ -2041,8 +2043,8 @@ function kjm(){
  
 function kw(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸Ä¶ÍÁ¶ÉÏÏŞ";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹é”»ç‚¼ä¸Šé™";
 			break;
 		}
 	}
@@ -2051,8 +2053,8 @@ function kw(){
  
 function kk(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "¼ò¸Ä¿ÌÓ¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "ç®€æ”¹åˆ»å°";
 			break;
 		}
 	}
@@ -2061,8 +2063,8 @@ function kk(){
  
 function hjk(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄGÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹Gä¸Šå‡";
 			break;
 		}
 	}
@@ -2071,8 +2073,8 @@ function hjk(){
  
 function hjh(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄPÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹Pä¸Šå‡";
 			break;
 		}
 	}
@@ -2081,8 +2083,8 @@ function hjh(){
  
 function hjb(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄFÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹Fä¸Šå‡";
 			break;
 		}
 	}
@@ -2091,8 +2093,8 @@ function hjb(){
  
 function hjt(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄTÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹Tä¸Šå‡";
 			break;
 		}
 	}
@@ -2101,8 +2103,8 @@ function hjt(){
  
 function hjm(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸ÄWÉÏÉı";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹Wä¸Šå‡";
 			break;
 		}
 	}
@@ -2111,8 +2113,8 @@ function hjm(){
  
 function hw(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸Ä¶ÍÁ¶ÉÏÏŞ";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹é”»ç‚¼ä¸Šé™";
 			break;
 		}
 	}
@@ -2121,8 +2123,8 @@ function hw(){
  
 function hk(){
 	for(i=0;i<5;i++){
-		if(	document.frm.kai[i].value == "ÎŞ"){
-			document.frm.kai[i].value = "Õæ¸Ä¿ÌÓ¡";
+		if(	document.frm.kai[i].value == "æ— "){
+			document.frm.kai[i].value = "çœŸæ”¹åˆ»å°";
 			break;
 		}
 	}
@@ -2130,33 +2132,33 @@ function hk(){
 }
  
 function kai_del1(){
-	document.frm.kai[0].value = "ÎŞ";
+	document.frm.kai[0].value = "æ— ";
 	calc();
 }
  
 function kai_del2(){
-	document.frm.kai[1].value = "ÎŞ";
+	document.frm.kai[1].value = "æ— ";
 	calc();
 }
  
 function kai_del3(){
-	document.frm.kai[2].value = "ÎŞ";
+	document.frm.kai[2].value = "æ— ";
 	calc();
 }
  
 function kai_del4(){
-	document.frm.kai[3].value = "ÎŞ";
+	document.frm.kai[3].value = "æ— ";
 	calc();
 }
  
 function kai_del5(){
-	document.frm.kai[4].value = "ÎŞ";
+	document.frm.kai[4].value = "æ— ";
 	calc();
 }
  
 function kai_reset(){
 	for(i=0;i<5;i++){
-		document.frm.kai[i].value = "ÎŞ";
+		document.frm.kai[i].value = "æ— ";
 	}
 	calc();
 }
@@ -2179,7 +2181,7 @@ function num_reset(){
 
 
 
-<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%">ÎŞË«Ä£¼ÆÆ÷ ¡ª¡¶Õæ¡¤Èı¹úÎŞË«OnlineZ¡·</p>
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%">æ— åŒæ¨¡è®¡å™¨ â€”ã€ŠçœŸÂ·ä¸‰å›½æ— åŒOnlineZã€‹</p>
 <div id="container">
 <div id="tj">
 <div class="box">
@@ -2207,35 +2209,35 @@ function num_reset(){
 				<tbody>
 					<tr>
 						<th rowspan="2" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÎäÆ÷Ñ¡Ôñ</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ­¦å™¨é€‰æ‹©</p>
 							
 						</th>
 						<th rowspan="2" nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">SLOT</p>
 						</th>
 						<th rowspan="2" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">»ù´¡Öµ</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">åŸºç¡€å€¼</p>
 						</th>
 						<th rowspan="2" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">Ç¿»¯</p>
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ºÏ³É</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">å¼ºåŒ–</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">åˆæˆ</p>
 						</th>
 						<th colspan="2" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÉÏÉıÖµ</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ä¸Šå‡å€¼</p>
 						</th>
 						<th rowspan="1" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÉÏÉıÌØ</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ä¸Šå‡ç‰¹</p>
 						</th>
 						<th nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">Š»¯Êı 
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">å¼·åŒ–æ•° 
 								<input maxlength="2" size="6" value="0/24" name="waku"></p>
 						</th>
 						
 						<th nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">´«Ëµ»¯</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ä¼ è¯´åŒ–</p>
 						</th>
 						<th colspan="5" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¸ÄÔì</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”¹é€ </p>
 						</th>
 						
 					</tr>
@@ -2274,134 +2276,134 @@ function num_reset(){
 							<th width="1%">1</th>
 							<th width="1%">2</th>
 							<th width="1%">3</th>
-							<th width="1%">ÁÓ</th>
+							<th width="1%">åŠ£</th>
 							</table>
 						</th>
 						<th colspan="2" nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">¼ò¸Ä</p>
+							<p style="LINE-HEIGHT: 150%" align="center">ç®€æ”¹</p>
 						</th>
 						<th colspan="2" nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">Õæ¸Ä</p>
+							<p style="LINE-HEIGHT: 150%" align="center">çœŸæ”¹</p>
 						</th>
 						<th nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">¸ÄÔìÁĞ±í</p>
+							<p style="LINE-HEIGHT: 150%" align="center">æ”¹é€ åˆ—è¡¨</p>
 						</th>
 					</tr>
 					<tr>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
 								<select onclick="calc();" name="buki"> 
-									<option selected="" value="ÙÈÔÂµ¶">ÙÈÔÂµ¶</option> 
-									<option value="´ó¸«">´ó¸«</option> 
-									<option value="Ëé°ô">Ëé°ô</option> 
-									<option value="Ìú±Ş">Ìú±Ş</option> 
-									<option value="ÆÓµ¶">ÆÓµ¶</option> 
-									<option value="¼×µ¶">¼×µ¶</option> 
-									<option value="Ëé¹÷">Ëé¹÷</option> 
-									<option value="Ë«±Ş">Ë«±Ş</option> 
-									<option value="Õ½¸«">Õ½¸«</option> 
-									<option value="Ë«êª">Ë«êª</option> 
-									<option value="Ë«½£">Ë«½£</option> 
-									<option value="Ë«´¸">Ë«´¸</option> 
-									<option value="Ö±Ç¹">Ö±Ç¹</option> 
-									<option value="³¤¹÷">³¤¹÷</option> 
-									<option value="Ó£ÉÈ">Ó£ÉÈ</option> 
-									<option value="ÑàÉÈ">ÑàÉÈ</option> 
-									<option value="»ÃÕÈ">»ÃÕÈ</option> 
-									<option value="·¨ÕÈ">·¨ÕÈ</option> 
-									<option value="Ìú¹³">Ìú¹³</option> 
-									<option value="ÂùÈ­">ÂùÈ­</option> 
-									<option value="Ìú½£">Ìú½£</option> 
-									<option value="Óüµ¶">Óüµ¶</option> 
-									<option value="Õ½ÅÌ">Õ½ÅÌ</option> 
-									<option value="¶à½Ú±Ş">¶à½Ú±Ş</option> 
-									<option value="³¤Ë«µ¶">³¤Ë«µ¶</option> 
-									<option value="¹³Á­µ¶">¹³Á­µ¶</option> 
-									<option value="±¦½£">±¦½£</option> 
-									<option value="ÌúÇ¹">ÌúÇ¹</option> 
-									<option value="Ë«½Ú¹÷">Ë«½Ú¹÷</option> 
-									<option value="ÏÄ‡ü">ÏÄ‡ü</option> 
-									<option value="ÌúÃ¬">ÌúÃ¬</option> 
-									<option value="Õ¶Âíµ¶">Õ¶Âíµ¶</option> 
-									<option value="ÓğÉÈ">ÓğÉÈ</option> 
-									<option value="Í¶»¡ÈĞ">Í¶»¡ÈĞ</option> 
-									<option value="»ıÈĞ½£">»ıÈĞ½£</option> 
-									<option value="½«½£">½«½£</option> 
-									<option value="»¡µ¶">»¡µ¶</option> 
-									<option value="Ğı¹÷">Ğı¹÷</option> 
-									<option value="ÑÀ±Ú">ÑÀ±Ú</option> 
-									<option value="ÅÌµ¶">ÅÌµ¶</option> 
-									<option value="Õ½¸ê">Õ½¸ê</option> 
-									<option value="ÌúµÑ">ÌúµÑ</option> 
-									<option value="Ë«ÈĞ½£">Ë«ÈĞ½£</option> 
-									<option value="¼â½£">¼â½£</option> 
-									<option value="Öä·û">Öä·û</option> 
-									<option value="Èı¼âÇ¹">Èı¼âÇ¹</option> 
-									<option value="²æÍ»Ã¬">²æÍ»Ã¬</option> 
-									<option value="¶Ïêª">¶Ïêª</option> 
-									<option value="ÑÀ½£">ÑÀ½£</option> 
-									<option value="ÌÒÉÈ">ÌÒÉÈ</option> 
-									<option value="Ìúêª">Ìúêª</option> 
-									<option value="÷ë½Çµ¶">÷ë½Çµ¶</option> 
-									<option value="´©ÈĞ">´©ÈĞ</option> 
-									<option value="ÀÇÑÀ°ô">ÀÇÑÀ°ô</option> 
-									<option value="Éß½£">Éß½£</option> 
-									<option value="¾Ş½£">¾Ş½£</option> 
-									<option value="Ï¸½£">Ï¸½£</option> 
-									<option value="ÖØÊÖ¼×">ÖØÊÖ¼×</option> 
-									<option value="ÁúÑÀ¹³">ÁúÑÀ¹³</option> 
-									<option value="¶éÂä">¶éÂä</option> 
-									<option value="ïÚ">ïÚ</option> 
-									<option value="ÇàÁúµ¶">ÇàÁúµ¶</option> 
-									<option value="ÂİĞıÇ¹">ÂİĞıÇ¹</option> 
-									<option value="À×ÃùÇ¹">À×ÃùÇ¹</option> 
-									<option value="»ğÑæ‡ü">»ğÑæ‡ü</option>
-									<option value="·ÉÏè½£">·ÉÏè½£</option>
-									<option value="ÁúÉÈ">ÁúÉÈ</option>
-									<option value="Ë«îá">Ë«îá</option>
-									<option value="ºìÁúµ¶">ºìÁúµ¶</option>
-									<option value="³¤¹­">³¤¹­</option>
-									<option value="·ÉÀö×¦">·ÉÀö×¦</option>
-									<option value="´óîá">´óîá</option>
-									<option value="´òÇò¹÷">´òÇò¹÷</option>
-									<option value="Ë«Áú½£">Ë«Áú½£</option>
- 									<option value="Ò°Ì«µ¶">Ò°Ì«µ¶</option>
-                         						<option value="´òË«±Ş">´òË«±Ş</option>
-									<option value="Ğı»÷¹÷">Ğı»÷¹÷</option>
-									<option value="÷è÷ëµ¶">÷è÷ëµ¶</option>
-									<option value="»÷½£">»÷½£</option>
-									<option value="ÔÂÏã±Ş">ÔÂÏã±Ş</option>
-									<option value="·½Ììêª">·½Ììêª</option>
-									<option value="ÌúÖÛ">ÌúÖÛ</option>
-									<option value="ÌúÉÈ">ÌúÉÈ</option>
-									<option value="Ë«ÕÈ">Ë«ÕÈ</option>
-									<option value="ºìÁ«µÑ">ºìÁ«µÑ</option>
-									<option value="²¨¶·¹÷">²¨¶·¹÷</option>
-									<option value="ĞıÈĞÅÌ">ĞıÈĞÅÌ</option>
-									<option value="´Ì½£">´Ì½£</option>
-									<option value="±Ê¼Ü²æ">±Ê¼Ü²æ</option>
-									<option value="¶Ìêª">¶Ìêª</option>
-									<option value="³¤µ¶">³¤µ¶</option>
-									<option value="ÎıÕÈ">ÎıÕÈ</option>
-									<option value="´òµ¶">´òµ¶</option>
-									<option value="¶ÏÔÂÈĞ">¶ÏÔÂÈĞ</option>
-									<option value="Ñ¸À×½£">Ñ¸À×½£</option>
-									<option value="Á¬åóÅÚ">Á¬åóÅÚ</option>
-									<option value="ÁúÇ¹">ÁúÇ¹</option>
-									<option value="À£°ô">À£°ô</option>
-									<option value="µ¼·û">µ¼·û</option>
-									<option value="·Éµ¶">·Éµ¶</option>
-									<option value="ÊÖ¸«">ÊÖ¸«</option>
-									<option value="´ó½£">´ó½£</option>
-									<option value="Ë«Õ¶½£">Ë«Õ¶½£</option>
-									<option value="Ê®×Öêª">Ê®×Öêª</option>
-									<option value="Á½ÈĞÇ¹">Á½ÈĞÇ¹</option>
-									<option value="ÈĞåó">ÈĞåó</option>
-									<option value="Ø°Ê×">Ø°Ê×</option>
+									<option selected="" value="åƒæœˆåˆ€">åƒæœˆåˆ€</option> 
+									<option value="å¤§æ–§">å¤§æ–§</option> 
+									<option value="ç¢æ£’">ç¢æ£’</option> 
+									<option value="é“é­">é“é­</option> 
+									<option value="æœ´åˆ€">æœ´åˆ€</option> 
+									<option value="ç”²åˆ€">ç”²åˆ€</option> 
+									<option value="ç¢æ£">ç¢æ£</option> 
+									<option value="åŒé­">åŒé­</option> 
+									<option value="æˆ˜æ–§">æˆ˜æ–§</option> 
+									<option value="åŒæˆŸ">åŒæˆŸ</option> 
+									<option value="åŒå‰‘">åŒå‰‘</option> 
+									<option value="åŒé”¤">åŒé”¤</option> 
+									<option value="ç›´æª">ç›´æª</option> 
+									<option value="é•¿æ£">é•¿æ£</option> 
+									<option value="æ¨±æ‰‡">æ¨±æ‰‡</option> 
+									<option value="ç‡•æ‰‡">ç‡•æ‰‡</option> 
+									<option value="å¹»æ–">å¹»æ–</option> 
+									<option value="æ³•æ–">æ³•æ–</option> 
+									<option value="é“é’©">é“é’©</option> 
+									<option value="è›®æ‹³">è›®æ‹³</option> 
+									<option value="é“å‰‘">é“å‰‘</option> 
+									<option value="ç‹±åˆ€">ç‹±åˆ€</option> 
+									<option value="æˆ˜ç›˜">æˆ˜ç›˜</option> 
+									<option value="å¤šèŠ‚é­">å¤šèŠ‚é­</option> 
+									<option value="é•¿åŒåˆ€">é•¿åŒåˆ€</option> 
+									<option value="é’©é•°åˆ€">é’©é•°åˆ€</option> 
+									<option value="å®å‰‘">å®å‰‘</option> 
+									<option value="é“æª">é“æª</option> 
+									<option value="åŒèŠ‚æ£">åŒèŠ‚æ£</option> 
+									<option value="å¤åœ">å¤åœ</option> 
+									<option value="é“çŸ›">é“çŸ›</option> 
+									<option value="æ–©é©¬åˆ€">æ–©é©¬åˆ€</option> 
+									<option value="ç¾½æ‰‡">ç¾½æ‰‡</option> 
+									<option value="æŠ•å¼§åˆƒ">æŠ•å¼§åˆƒ</option> 
+									<option value="ç§¯åˆƒå‰‘">ç§¯åˆƒå‰‘</option> 
+									<option value="å°†å‰‘">å°†å‰‘</option> 
+									<option value="å¼§åˆ€">å¼§åˆ€</option> 
+									<option value="æ—‹æ£">æ—‹æ£</option> 
+									<option value="ç‰™å£">ç‰™å£</option> 
+									<option value="ç›˜åˆ€">ç›˜åˆ€</option> 
+									<option value="æˆ˜æˆˆ">æˆ˜æˆˆ</option> 
+									<option value="é“ç¬›">é“ç¬›</option> 
+									<option value="åŒåˆƒå‰‘">åŒåˆƒå‰‘</option> 
+									<option value="å°–å‰‘">å°–å‰‘</option> 
+									<option value="å’’ç¬¦">å’’ç¬¦</option> 
+									<option value="ä¸‰å°–æª">ä¸‰å°–æª</option> 
+									<option value="å‰çªçŸ›">å‰çªçŸ›</option> 
+									<option value="æ–­æˆŸ">æ–­æˆŸ</option> 
+									<option value="ç‰™å‰‘">ç‰™å‰‘</option> 
+									<option value="æ¡ƒæ‰‡">æ¡ƒæ‰‡</option> 
+									<option value="é“æˆŸ">é“æˆŸ</option> 
+									<option value="éºŸè§’åˆ€">éºŸè§’åˆ€</option> 
+									<option value="ç©¿åˆƒ">ç©¿åˆƒ</option> 
+									<option value="ç‹¼ç‰™æ£’">ç‹¼ç‰™æ£’</option> 
+									<option value="è›‡å‰‘">è›‡å‰‘</option> 
+									<option value="å·¨å‰‘">å·¨å‰‘</option> 
+									<option value="ç»†å‰‘">ç»†å‰‘</option> 
+									<option value="é‡æ‰‹ç”²">é‡æ‰‹ç”²</option> 
+									<option value="é¾™ç‰™é’©">é¾™ç‰™é’©</option> 
+									<option value="å •è½">å •è½</option> 
+									<option value="é•–">é•–</option> 
+									<option value="é’é¾™åˆ€">é’é¾™åˆ€</option> 
+									<option value="èºæ—‹æª">èºæ—‹æª</option> 
+									<option value="é›·é¸£æª">é›·é¸£æª</option> 
+									<option value="ç«ç„°åœ">ç«ç„°åœ</option>
+									<option value="é£ç¿”å‰‘">é£ç¿”å‰‘</option>
+									<option value="é¾™æ‰‡">é¾™æ‰‡</option>
+									<option value="åŒé’º">åŒé’º</option>
+									<option value="çº¢é¾™åˆ€">çº¢é¾™åˆ€</option>
+									<option value="é•¿å¼“">é•¿å¼“</option>
+									<option value="é£ä¸½çˆª">é£ä¸½çˆª</option>
+									<option value="å¤§é’º">å¤§é’º</option>
+									<option value="æ‰“çƒæ£">æ‰“çƒæ£</option>
+									<option value="åŒé¾™å‰‘">åŒé¾™å‰‘</option>
+ 									<option value="é‡å¤ªåˆ€">é‡å¤ªåˆ€</option>
+                         						<option value="æ‰“åŒé­">æ‰“åŒé­</option>
+									<option value="æ—‹å‡»æ£">æ—‹å‡»æ£</option>
+									<option value="éº’éºŸåˆ€">éº’éºŸåˆ€</option>
+									<option value="å‡»å‰‘">å‡»å‰‘</option>
+									<option value="æœˆé¦™é­">æœˆé¦™é­</option>
+									<option value="æ–¹å¤©æˆŸ">æ–¹å¤©æˆŸ</option>
+									<option value="é“èˆŸ">é“èˆŸ</option>
+									<option value="é“æ‰‡">é“æ‰‡</option>
+									<option value="åŒæ–">åŒæ–</option>
+									<option value="çº¢è²ç¬›">çº¢è²ç¬›</option>
+									<option value="æ³¢æ–—æ£">æ³¢æ–—æ£</option>
+									<option value="æ—‹åˆƒç›˜">æ—‹åˆƒç›˜</option>
+									<option value="åˆºå‰‘">åˆºå‰‘</option>
+									<option value="ç¬”æ¶å‰">ç¬”æ¶å‰</option>
+									<option value="çŸ­æˆŸ">çŸ­æˆŸ</option>
+									<option value="é•¿åˆ€">é•¿åˆ€</option>
+									<option value="é”¡æ–">é”¡æ–</option>
+									<option value="æ‰“åˆ€">æ‰“åˆ€</option>
+									<option value="æ–­æœˆåˆƒ">æ–­æœˆåˆƒ</option>
+									<option value="è¿…é›·å‰‘">è¿…é›·å‰‘</option>
+									<option value="è¿å¼©ç‚®">è¿å¼©ç‚®</option>
+									<option value="é¾™æª">é¾™æª</option>
+									<option value="æºƒæ£’">æºƒæ£’</option>
+									<option value="å¯¼ç¬¦">å¯¼ç¬¦</option>
+									<option value="é£åˆ€">é£åˆ€</option>
+									<option value="æ‰‹æ–§">æ‰‹æ–§</option>
+									<option value="å¤§å‰‘">å¤§å‰‘</option>
+									<option value="åŒæ–©å‰‘">åŒæ–©å‰‘</option>
+									<option value="åå­—æˆŸ">åå­—æˆŸ</option>
+									<option value="ä¸¤åˆƒæª">ä¸¤åˆƒæª</option>
+									<option value="åˆƒå¼©">åˆƒå¼©</option>
+									<option value="åŒ•é¦–">åŒ•é¦–</option>
 								</select> </p>
 						</td>
 						<td bgcolor="#ff9966" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¹¥»÷
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”»å‡»
 								<input maxlength="2" size="1" value="3" name="slot"></p>
 						</td>
 						<td bgcolor="#ff9966" nowrap="">
@@ -2454,45 +2456,45 @@ function num_reset(){
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kkk();" type="button" value="G»ù´¡"></p>
+								<input onclick="kkk();" type="button" value="GåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kjk();" type="button" value="GÉÏÉı"></p>
+								<input onclick="kjk();" type="button" value="Gä¸Šå‡"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hkk();" type="button" value="G»ù´¡"></p>
+								<input onclick="hkk();" type="button" value="GåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hjk();" type="button" value="GÉÏÉı"></p>
+								<input onclick="hjk();" type="button" value="Gä¸Šå‡"></p>
 						</td>
 						<td rowspan="6" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¸ÄÔì1
-							<input maxlength="2" size="10" value="ÎŞ" name="kai">
-							<input onclick="kai_del1();" type="button" value="Ï÷³ı"> 
-							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¸ÄÔì2
-							<input maxlength="2" size="10" value="ÎŞ" name="kai">
-							<input onclick="kai_del2();" type="button" value="Ï÷³ı"> 
-							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¸ÄÔì3
-							<input maxlength="2" size="10" value="ÎŞ" name="kai">
-							<input onclick="kai_del3();" type="button" value="Ï÷³ı"> 
-							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¸ÄÔì4
-							<input maxlength="2" size="10" value="ÎŞ" name="kai">
-							<input onclick="kai_del4();" type="button" value="Ï÷³ı"> 
-							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¸ÄÔì5
-								<input maxlength="2" size="10" value="ÎŞ" name="kai">
-								<input onclick="kai_del5();" type="button" value="Ï÷³ı"></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”¹é€ 1
+							<input maxlength="2" size="10" value="æ— " name="kai">
+							<input onclick="kai_del1();" type="button" value="å‰Šé™¤"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”¹é€ 2
+							<input maxlength="2" size="10" value="æ— " name="kai">
+							<input onclick="kai_del2();" type="button" value="å‰Šé™¤"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”¹é€ 3
+							<input maxlength="2" size="10" value="æ— " name="kai">
+							<input onclick="kai_del3();" type="button" value="å‰Šé™¤"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”¹é€ 4
+							<input maxlength="2" size="10" value="æ— " name="kai">
+							<input onclick="kai_del4();" type="button" value="å‰Šé™¤"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”¹é€ 5
+								<input maxlength="2" size="10" value="æ— " name="kai">
+								<input onclick="kai_del5();" type="button" value="å‰Šé™¤"></p>
 						</td>
 						
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center"><b>µÈ¼¶</b></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center"><b>ç­‰çº§</b></p>
 						</td>
 						<td bgcolor="#ffff66" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÆÆ»µ 
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ç ´å 
 								<input maxlength="2" size="1" value="2" name="slot"></p>
 						</td>
 						<td bgcolor="#ffff66" nowrap="">
@@ -2539,23 +2541,23 @@ function num_reset(){
 						<td nowrap="">
 							<table align="center">
 							<th width="20"><input onclick="calc();" id="den_t0" checked="" type="radio" value="112" name="den_t"></th> 
-								<td width="90" align="left"><label for="den_t0">¼â¾§(¹¥ÆÆ)</label></td></table>
+								<td width="90" align="left"><label for="den_t0">å°–æ™¶(æ”»ç ´)</label></td></table>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kkh();" type="button" value="P»ù´¡"></p>
+								<input onclick="kkh();" type="button" value="PåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kjh();" type="button" value="PÉÏÉı"></p>
+								<input onclick="kjh();" type="button" value="Pä¸Šå‡"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hkh();" type="button" value="P»ù´¡"></p>
+								<input onclick="hkh();" type="button" value="PåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hjh();" type="button" value="PÉÏÉı"></p>
+								<input onclick="hjh();" type="button" value="Pä¸Šå‡"></p>
 						</td>
 						
 					</tr>
@@ -2584,7 +2586,7 @@ function num_reset(){
 								<label for="rank7">R7</label></p>
 						</td>
 						<td bgcolor="#00cccc" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">·ÀÓù 
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">é˜²å¾¡ 
 								<input maxlength="2" size="1" value="5" name="slot"></p>
 						</td>
 						<td bgcolor="#00cccc" nowrap="">
@@ -2632,29 +2634,29 @@ function num_reset(){
 						<td nowrap="">
 							<table align="center">
 								<th width="20"><input onclick="calc();" id="den_t1" type="radio" value="11002" name="den_t"></th>
-								<td width="90" align="left"><label for="den_t1">ÓñµÎ(·ÀÌå)</label></td></table>
+								<td width="90" align="left"><label for="den_t1">ç‰æ»´(é˜²ä½“)</label></td></table>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kkb();" type="button" value="F»ù´¡"></p>
+								<input onclick="kkb();" type="button" value="FåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kjb();" type="button" value="FÉÏÉı"></p>
+								<input onclick="kjb();" type="button" value="Fä¸Šå‡"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hkb();" type="button" value="F»ù´¡"></p>
+								<input onclick="hkb();" type="button" value="FåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hjb();" type="button" value="FÉÏÉı"></p>
+								<input onclick="hjb();" type="button" value="Fä¸Šå‡"></p>
 						</td>
 						
 					</tr>
 					<tr>
 						<td bgcolor="#6699ff" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÌåÁ¦ 
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ä½“åŠ› 
 								<input maxlength="2" size="1" value="1" name="slot"></p>
 						</td>
 						<td bgcolor="#6699ff" nowrap="">
@@ -2702,29 +2704,29 @@ function num_reset(){
 						<td nowrap="">
 							<table align="center">
 								<th width="20"><input onclick="calc();" id="den_t2" type="radio" value="33333" name="den_t"></th>
-								<td width="90" align="left"><label for="den_t2">ÁğÁ§(Æ½ºâ)</label></td></table>
+								<td width="90" align="left"><label for="den_t2">ç‰ç’ƒ(å¹³è¡¡)</label></td></table>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kkt();" type="button" value="T»ù´¡"></p>
+								<input onclick="kkt();" type="button" value="TåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kjt();" type="button" value="TÉÏÉı"></p>
+								<input onclick="kjt();" type="button" value="Tä¸Šå‡"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hkt();" type="button" value="T»ù´¡"></p>
+								<input onclick="hkt();" type="button" value="TåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hjt();" type="button" value="TÉÏÉı"></p>
+								<input onclick="hjt();" type="button" value="Tä¸Šå‡"></p>
 						</td>
 						
 					</tr>
 					<tr>
 						<td bgcolor="#ff6699" nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÎŞË« 
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ— åŒ 
 								<input maxlength="2" size="1" value="6" name="slot"></p>
 						</td>
 						<td bgcolor="#ff6699" nowrap="">
@@ -2769,29 +2771,29 @@ function num_reset(){
 						
 						
 						<td nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center"><b>ÒÆ¶¯ÌØ</b></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center"><b>ç§»åŠ¨ç‰¹</b></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kkm();" type="button" value="W»ù´¡"></p>
+								<input onclick="kkm();" type="button" value="WåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kjm();" type="button" value="WÉÏÉı"></p>
+								<input onclick="kjm();" type="button" value="Wä¸Šå‡"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hkm();" type="button" value="W»ù´¡"></p>
+								<input onclick="hkm();" type="button" value="WåŸºç¡€"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hjm();" type="button" value="WÉÏÉı"></p>
+								<input onclick="hjm();" type="button" value="Wä¸Šå‡"></p>
 						</td>
 						
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">ÒÆ¶¯</p>
+							<p style="LINE-HEIGHT: 150%" align="center">ç§»åŠ¨</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -2810,11 +2812,11 @@ function num_reset(){
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="full();" type="button" value="ÂúÌØ"></p>
+								<input onclick="full();" type="button" value="æ»¡ç‰¹"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="num_reset();" type="button" value="¹é 0"></p>
+								<input onclick="num_reset();" type="button" value="å½’ 0"></p>
 						</td>
 						
 						
@@ -2828,26 +2830,26 @@ function num_reset(){
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kki();" type="button" value="ÒÆ¶¯"></p>
+								<input onclick="kki();" type="button" value="ç§»åŠ¨"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kw();" type="button" value="¶ÍÁ¶"></p>
+								<input onclick="kw();" type="button" value="é”»ç‚¼"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hki();" type="button" value="ÒÆ¶¯"></p>
+								<input onclick="hki();" type="button" value="ç§»åŠ¨"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hw();" type="button" value="¶ÍÁ¶"></p>
+								<input onclick="hw();" type="button" value="é”»ç‚¼"></p>
 						</td>
 						
 						
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">ÌøÔ¾</p>
+							<p style="LINE-HEIGHT: 150%" align="center">è·³è·ƒ</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -2866,7 +2868,7 @@ function num_reset(){
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="toku_reset();" type="button" value="¹é 0"></p>
+								<input onclick="toku_reset();" type="button" value="å½’ 0"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">&nbsp;</p>
@@ -2884,23 +2886,23 @@ function num_reset(){
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kkj();" type="button" value="ÌøÔ¾"></p>
+								<input onclick="kkj();" type="button" value="è·³è·ƒ"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kk();" type="button" value="¿ÌÓ¡"></p>
+								<input onclick="kk();" type="button" value="åˆ»å°"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hkj();" type="button" value="ÌøÔ¾"></p>
+								<input onclick="hkj();" type="button" value="è·³è·ƒ"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="hk();" type="button" value="¿ÌÓ¡"></p>
+								<input onclick="hk();" type="button" value="åˆ»å°"></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">
-								<input onclick="kai_reset();" type="button" value="¸ÄÔìÇå¿Õ"></p>
+								<input onclick="kai_reset();" type="button" value="æ”¹é€ æ¸…ç©º"></p>
 						</td>
 						
 					</tr>
@@ -2911,24 +2913,24 @@ function num_reset(){
 				<tbody>
 					<tr>
 						<td rowspan="8" nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center"><b>½á¹û</b></p>
+							<p style="LINE-HEIGHT: 150%" align="center"><b>ç»“æœ</b></p>
 						</td>
 						<td nowrap="">
 							<p style="LINE-HEIGHT: 150%" align="center">&nbsp;</p>
 						</td>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center"><b>ºÏ¼ÆÖµ</b></p>
+							<p style="LINE-HEIGHT: 150%" align="center"><b>åˆè®¡å€¼</b></p>
 						</td>
 						<td colspan="2" nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center"><b>Ä£Äâ¶ÍÁ¶¶È</b></p>
+							<p style="LINE-HEIGHT: 150%" align="center"><b>æ¨¡æ‹Ÿé”»ç‚¼åº¦</b></p>
 						</td>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center"><b>²ÎÕÕÍ¼</b></p>
+							<p style="LINE-HEIGHT: 150%" align="center"><b>å‚ç…§å›¾</b></p>
 						</td>
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">¹¥»÷</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">æ”»å‡»</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -2951,7 +2953,7 @@ function num_reset(){
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÆÆ»µ</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ç ´å</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -2971,7 +2973,7 @@ function num_reset(){
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">·ÀÓù</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">é˜²å¾¡</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -2991,7 +2993,7 @@ function num_reset(){
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ÌåÁ¦</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">ä½“åŠ›</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -3012,7 +3014,7 @@ function num_reset(){
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">ÎŞË«</p>
+							<p style="LINE-HEIGHT: 150%" align="center">æ— åŒ</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -3032,7 +3034,7 @@ function num_reset(){
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">ÒÆ¶¯</p>
+							<p style="LINE-HEIGHT: 150%" align="center">ç§»åŠ¨</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
@@ -3045,7 +3047,7 @@ function num_reset(){
 					</tr>
 					<tr>
 						<td nowrap="">
-							<p style="LINE-HEIGHT: 150%" align="center">ÌøÔ¾</p>
+							<p style="LINE-HEIGHT: 150%" align="center">è·³è·ƒ</p>
 						</td>
 						<td nowrap="">
 							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
