@@ -1,0 +1,3063 @@
+
+<html><head>
+<title>無双模计器</title>
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+<style>
+  #g {
+    margin-left:15px;
+    margin-right:15px;
+    clear: left;
+    width: 600px;
+
+    }
+  #g .ui-slider-range { background:#ff9966; }
+  #g .ui-slider-handle { border-color:#ff9966; width: 10px;}
+#p {
+    margin-left:15px;
+    clear: left;
+    width: 600px;
+
+    }
+  #p .ui-slider-range { background:#ffff66; }
+  #p .ui-slider-handle { border-color:#ffff66; width: 10px;}
+#f {
+    margin-left:15px;
+    clear: left;
+    width: 600px;
+
+    }
+  #f .ui-slider-range { background:#00cccc; }
+  #f .ui-slider-handle { border-color:#00cccc; width: 10px;}
+#t {
+margin-left:15px;
+    
+    clear: left;
+    width: 600px;
+
+    }
+  #t .ui-slider-range { background:#6699ff; }
+  #t .ui-slider-handle { border-color:#6699ff; width: 10px;}
+#w {
+    margin-left:15px;
+    clear: left;
+    width: 600px;
+
+    }
+  #w .ui-slider-range { background:#ff6699; }
+  #w .ui-slider-handle { border-color:#ff6699; width: 10px;}
+  </style>
+
+<script language="JavaScript"> 
+ $(function() {
+    $( "#g" ).slider({
+      range: "min",
+      value: 170,
+      min: 0,
+      max: 510,
+      slide: function( event, u ) {
+        $( "#amount" ).val(u.value );
+      }
+    });
+    $( "#amount" ).val($( "#g" ).slider( "value" ) );
+$( "#p" ).slider({
+      range: "min",
+      value: 170,
+      min: 0,
+      max: 510,
+      slide: function( event, u ) {
+        $( "#phl" ).val(u.value );
+      }
+    });
+    $( "#phl" ).val($( "#p" ).slider( "value" ) );
+$( "#f" ).slider({
+      range: "min",
+      value: 170,
+      min: 0,
+      max: 510,
+      slide: function( event, u ) {
+        $( "#fyl" ).val(u.value );
+      }
+    });
+    $( "#fyl" ).val($( "#f" ).slider( "value" ) );
+$( "#t" ).slider({
+      range: "min",
+      value:200,
+      min: 0,
+      max: 600,
+      slide: function( event, u ) {
+        $( "#tl" ).val(u.value );
+      }
+    });
+    $( "#tl" ).val($( "#t" ).slider( "value" ) );
+$( "#w" ).slider({
+      range: "min",
+      value: 200,
+      min: 0,
+      max: 600,
+      slide: function( event, u ) {
+        $( "#ws" ).val(u.value );
+      }
+    });
+    $( "#ws" ).val($( "#w" ).slider( "value" ) );
+  });
+
+
+total1 = new Array(0,0,0,0,0,0,0);
+total2 = new Array(0,0,0,0,0,0,0);
+base = new Array(0,0,0,0,0,0,0);
+qhhc = new Array(0,0,0,0,0,0,0);
+up   = new Array(0,0,0,0,0,0,0);
+slot = new Array(0,0,0,0,0);
+hosei = 10;
+motion = "";
+offset1 = 0;
+offset2 = 0;
+kankaku = 25;
+shime = 0;
+
+function buki_init(buki){
+	switch(buki){
+		case "偃月刀":
+		base = new Array(49,37,35,170,140,110,135);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,23,29,21,31,0,0);
+		slot = new Array(3,2,5,1,6);
+		hosei = 12;
+		motion = "15*N+〆";
+		offset1 = 6+12-1;
+		offset2 = 1;
+		kankaku = 30;
+		shime = 20;
+		break;
+		case "大斧":
+		base = new Array(44,44,34,170,145,115,125);
+		qhhc = new Array(20,13,18,8,18,0,0);
+		<!--qhhc = new Array("+20","+13","+18","+8","+18",0,0);-->
+		up   = new Array(21,14,23,32,35,0,0);
+		slot = new Array(2,1,3,6,5);
+		hosei = 10;
+		motion = "15*N+〆";
+		offset1 = 5+10-1;
+		offset2 = 1;
+		kankaku = 28;
+		shime = 20;
+		break;
+		case "碎棒":
+		base = new Array(46,55,42,200,120,100,120);
+		qhhc = new Array(10,40,20,30,20,0,0);
+		up   = new Array(23,36,16,38,18,0,0);
+		slot = new Array(3,5,1,6,2);
+		hosei = 15;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "铁鞭":
+		base = new Array(45,49,35,190,140,110,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(31,21,16,27,34,0,0);
+		slot = new Array(5,2,1,3,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "朴刀":
+		base = new Array(44,39,31,170,155,125,150);
+		qhhc = new Array(20,25,20,10,20,0,0);
+		up   = new Array(31,26,30,24,8,0,0);
+		slot = new Array(5,3,6,2,1);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 10-1;
+		offset2 = 0;
+		kankaku = 49;
+		shime = "15+20";
+		break;
+		case "甲刀":
+		base = new Array(46,37,35,160,145,130,150);
+		qhhc = new Array(20,25,15,20,0,4,0);
+		up   = new Array(25,31,15,14,35,0,0);
+		slot = new Array(3,5,1,2,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "碎棍":
+		base = new Array(41,45,30,160,140,120,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,21,30,22,31,0,0);
+		slot = new Array(3,1,5,2,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双鞭":
+		base = new Array(46,40,34,180,135,110,135);
+		qhhc = new Array(25,35,0,30,20,2,0);
+		up   = new Array(30,31,22,29,15,0,0);
+		slot = new Array(5,6,2,3,1);
+		hosei = 15;
+		motion = "(17+17)*N+〆";
+		offset1 = 3-1;
+		offset2 = 0;
+		kankaku = 46;
+		shime = "20+15+20";
+		break;
+		case "战斧":
+		base = new Array(52,45,36,160,140,100,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(22,23,27,29,24,0,0);
+		slot = new Array(1,3,5,6,2);
+		hosei = 13;
+		motion = "(15+15)*N+〆";
+		offset1 = 7-1;
+		offset2 = 0;
+		kankaku = 56;
+		shime = 20;
+		break;
+		case "双戟":
+		base = new Array(45,47,33,180,120,100,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(28,30,20,26,23,0,0);
+		slot = new Array(5,6,1,2,3);
+		hosei = 16;
+		motion = "(12+12)*N+〆";
+		offset1 = 8-5;
+		offset2 = 0;
+		kankaku = 48;
+		shime = 12;
+		break;
+		case "双剑":
+		base = new Array(40,29,25,140,150,140,155);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,18,28,15,31,0,0);
+		slot = new Array(3,2,5,1,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双锤":
+		base = new Array(41,37,31,150,170,135,155);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(29,15,25,34,20,0,0);
+		slot = new Array(5,1,3,6,2);
+		hosei = 10;
+		motion = "18*N+〆";
+		offset1 = 5+43-1;
+		offset2 = 1;
+		kankaku = 36;
+		shime = "20";
+		break;
+		case "直枪":
+		base = new Array(46,34,28,160,165,115,145);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,20,31,30,18,0,0);
+		slot = new Array(2,3,5,6,1);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "长棍":
+		base = new Array(45,29,28,150,150,125,150);
+		qhhc = new Array(15,20,25,10,20,3,0);
+		up   = new Array(24,31,21,31,18,0,0);
+		slot = new Array(2,5,3,6,1);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "樱扇":
+		base = new Array(42,34,30,140,160,130,150);
+		qhhc = new Array(15,20,0,40,30,5,0);
+		up   = new Array(29,18,20,19,35,0,0);
+		slot = new Array(5,3,2,1,6);
+		hosei = 10;
+		motion = "15*N+〆";
+		offset1 = 10+30-1;
+		offset2 = 1;
+		kankaku = 41;
+		shime = "20";
+		break;
+		case "燕扇":
+		base = new Array(41,32,23,140,165,115,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(26,32,31,9,25,0,0);
+		slot = new Array(3,6,5,1,2);
+		hosei = 16;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "幻杖":
+		base = new Array(44,32,28,160,175,120,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(33,23,18,30,21,0,0);
+		slot = new Array(6,3,1,5,2);
+		hosei = 10;
+		motion = "12*N+〆";
+		offset1 = 12+27-8;
+		offset2 = 1;
+		kankaku = 30;
+		shime = "20";
+		break;
+		case "法杖":
+		base = new Array(43,37,28,170,160,125,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(34,29,25,22,15,0,0);
+		slot = new Array(6,5,3,2,1);
+		hosei = 15;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "铁钩":
+		base = new Array(40,37,30,140,165,140,160);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,29,35,15,15,0,0);
+		slot = new Array(3,5,6,2,1);
+		hosei = 10;
+		motion = "(12+12)*N+〆";
+		offset1 = 8-8;
+		offset2 = 0;
+		kankaku = 80;
+		shime = 17;
+		break;
+		case "蛮拳":
+		base = new Array(49,52,36,190,120,100,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,23,33,25,27,0,0);
+		slot = new Array(3,1,6,2,5);
+		hosei = 11;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "铁剑":
+		base = new Array(41,42,28,150,155,130,155);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(28,23,23,26,17,0,0);
+		slot = new Array(6,3,2,5,1);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "狱刀":
+		base = new Array(46,47,42,190,130,110,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,35,17,17,31,0,0);
+		slot = new Array(3,5,2,1,6);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 9-1;
+		offset2 = 0;
+		kankaku = 50;
+		shime = "15+15+20";
+		break;
+		case "战盘":
+		base = new Array(49,55,35,190,120,110,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,23,35,29,22,0,0);
+		slot = new Array(1,3,6,5,2);
+		hosei = 13;
+		motion = "(13+13)*N+〆";
+		offset1 = 20-17;
+		offset2 = 0;
+		kankaku = 53;
+		shime = 17;
+		break;
+		case "多节鞭":
+		base = new Array(47,29,28,140,150,140,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(19,35,22,29,16,0,0);
+		slot = new Array(3,6,2,5,1);
+		hosei = 10;
+		motion = "(8+8)*N+〆";
+		offset1 = 5-2;
+		offset2 = 0;
+		kankaku = 25;
+		shime = "15";
+		break;
+		case "长双刀":
+		base = new Array(49,37,30,170,140,120,135);
+		qhhc = new Array(20,30,10,20,30,0,0);
+		up   = new Array(24,20,20,34,34,0,0);
+		slot = new Array(3,1,2,5,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "钩镰刀":
+		base = new Array(44,44,29,160,145,115,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(30,22,23,35,16,0,0);
+		slot = new Array(5,2,3,6,1);
+		hosei = 12;
+		motion = "(15+15)*N+〆";
+		offset1 = 8-1;
+		offset2 = 0;
+		kankaku = 53;
+		shime = 20;
+		break;
+		case "宝剑":
+		base = new Array(46,55,42,160,120,125,120);
+		qhhc = new Array(20,25,20,20,0,5,0);
+		up   = new Array(21,21,35,27,19,0,0);
+		slot = new Array(2,3,6,5,1);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 9-1;
+		offset2 = 0;
+		kankaku = 50;
+		shime = 20;
+		break;
+		case "铁枪":
+		base = new Array(45,49,35,160,140,120,130);
+		qhhc = new Array(15,0,20,20,40,5,0);
+		up   = new Array(23,18,30,33,21,0,0);
+		slot = new Array(3,1,5,6,2);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双节棍":
+		base = new Array(44,39,31,150,155,125,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(19,25,29,19,31,0,0);
+		slot = new Array(2,3,5,1,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "夏圏":
+		base = new Array(46,37,29,140,145,135,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(30,23,29,19,33,0,0);
+		slot = new Array(5,2,3,1,6);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 6-1;
+		offset2 = 0;
+		kankaku = 48;
+		shime = "20";
+		break;
+		case "铁矛":
+		base = new Array(44,40,32,180,130,115,120);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(24,33,18,28,20,0,0);
+		slot = new Array(3,6,1,5,2);
+		hosei = 16;
+		motion = "(15+15)*N+〆";
+		offset1 = 11-1;
+		offset2 = 0;
+		kankaku = 49;
+		shime = "15+20";
+		break;
+		case "斩马刀":
+		base = new Array(46,45,30,170,135,120,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,32,30,17,24,0,0);
+		slot = new Array(2,6,5,1,3);
+		hosei = 16;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "羽扇":
+		base = new Array(46,33,27,140,170,120,135);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(25,22,28,30,20,0,0);
+		slot = new Array(3,2,5,6,1);
+		hosei = 12;
+		motion = "(12+12)*N+〆";
+		offset1 = 30-21;
+		offset2 = 0;
+		kankaku = 52;
+		shime = "12+12+12+12";
+		break;
+		case "投弧刃":
+		base = new Array(47,44,28,150,140,130,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(28,22,22,35,17,0,0);
+		slot = new Array(5,3,2,6,1);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "积刃剑":
+		base = new Array(42,41,25,160,130,125,125);
+		qhhc = new Array(20,0,20,30,20,5,0);
+		up   = new Array(22,16,32,20,29,0,0);
+		slot = new Array(3,1,6,2,5);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 9-1;
+		offset2 = 0;
+		kankaku = 49;
+		shime = 20;
+		break;
+		case "将剑":
+		base = new Array(45,43,32,170,150,125,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,24,19,30,32,0,0);
+		slot = new Array(2,3,1,5,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "弧刀":
+		base = new Array(45,38,32,150,140,120,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(25,21,20,36,17,0,0);
+		slot = new Array(5,3,2,6,1);
+		hosei = 10;
+		motion = "(12+12)*N+〆";
+		offset1 = 5-1;
+		offset2 = 0;
+		kankaku = 30;
+		shime = "16";
+		break;
+		case "旋棍":
+		base = new Array(50,40,25,170,150,125,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,24,31,20,28,0,0);
+		slot = new Array(2,3,6,1,5);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 5-1;
+		offset2 = 0;
+		kankaku = 54;
+		shime = 20;
+		break;
+		case "牙壁":
+		base = new Array(42,48,42,180,135,110,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,21,35,28,22,0,0);
+		slot = new Array(3,1,6,5,2);
+		hosei = 11;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "盘刀":
+		base = new Array(47,50,26,190,130,120,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(29,23,27,36,16,0,0);
+		slot = new Array(5,2,3,6,1);
+		hosei = 12;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "战戈":
+		base = new Array(48,38,35,160,150,125,130);
+		qhhc = new Array(20,30,10,0,30,5,0);
+		up   = new Array(30,20,26,22,32,0,0);
+		slot = new Array(5,1,3,2,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "铁笛":
+		base = new Array(44,43,34,150,160,130,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(22,21,31,26,33,0,0);
+		slot = new Array(2,1,5,3,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双刃剑":
+		base = new Array(47,45,35,160,165,130,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,32,25,19,34,0,0);
+		slot = new Array(2,5,3,1,6);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 12-7;
+		offset2 = 0;
+		kankaku = 51;
+		shime = 20;
+		break;
+		case "尖剑":
+		base = new Array(48,35,32,170,140,135,140);
+		qhhc = new Array(11,8,11,13,13,4,0);
+		up   = new Array(32,16,33,21,23,0,0);
+		slot = new Array(5,1,6,2,3);
+		hosei = 10;
+		motion = "(14+14)*N+〆";
+		offset1 = 17-9;
+		offset2 = 0;
+		kankaku = 50;
+		shime = "14+14+14+14+18";
+		break;
+		case "咒符":
+		base = new Array(43,50,40,160,140,120,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(27,22,15,18,24,0,0);
+		slot = new Array(6,3,1,2,5);
+		hosei = 13;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "三尖枪":
+		base = new Array(45,39,30,170,160,120,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(25,24,34,21,32,0,0);
+		slot = new Array(3,2,6,1,5);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "叉突矛":
+		base = new Array(46,40,40,170,150,120,135);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(22,20,30,34,25,0,0);
+		slot = new Array(2,1,5,6,3);
+		hosei = 11;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "断戟":
+		base = new Array(47,38,40,180,140,120,130);
+		qhhc = new Array(20,25,10,20,30,0,0);
+		up   = new Array(24,16,31,26,31,0,0);
+		slot = new Array(3,1,5,2,6);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 9-1;
+		offset2 = 0;
+		kankaku = 44;
+		shime = "15+20";
+		break;
+		case "牙剑":
+		base = new Array(47,40,32,170,140,130,140);
+		qhhc = new Array(15,10,15,20,30,4,0);
+		up   = new Array(24,31,22,33,15,0,0);
+		slot = new Array(3,5,2,6,1);
+		hosei = 12;
+		motion = "(15+15)*N+〆";
+		offset1 = 9-1;
+		offset2 = 0;
+		kankaku = 49;
+		shime = 15;
+		break;
+		case "桃扇":
+		base = new Array(45,42,40,150,160,135,160);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(24,20,33,23,28,0,0);
+		slot = new Array(3,1,6,2,5);
+		hosei = 10;
+		motion = "15*N+〆";
+		offset1 = 17+12-1;
+		offset2 = 1;
+		kankaku = 16;
+		shime = 20;
+		break;
+		case "铁戟":
+		base = new Array(48,50,25,180,140,105,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(25,24,31,29,18,0,0);
+		slot = new Array(3,2,6,5,1);
+		hosei = 12;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "麟角刀":
+		base = new Array(48,39,28,160,145,125,145);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(32,18,20,27,33,0,0);
+		slot = new Array(5,1,2,3,6);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 9+24-1;
+		offset2 = 1;
+		kankaku = 31;
+		shime = 20;
+		break;		
+		case "穿刃":
+		base = new Array(47,41,27,140,160,140,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(25,33,17,36,21,0,0);
+		slot = new Array(3,5,1,6,2);
+		hosei = 10;
+		motion = "(4+4)*N+〆";
+		offset1 = 8-2;
+		offset2 = 0;
+		kankaku = 12;
+		shime = 15;
+		break;
+		case "狼牙棒":
+		base = new Array(48,38,34,170,150,110,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(30,32,27,23,16,0,0);
+		slot = new Array(5,6,3,2,1);
+		hosei = 12;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "蛇剑":
+		base = new Array(48,46,26,160,140,120,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(32,18,24,33,23,0,0);
+		slot = new Array(5,1,3,6,2);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 13-1;
+		offset2 = 0;
+		kankaku = 50;
+		shime = "15+20";
+		break;
+		case "巨剑":
+		base = new Array(49,35,30,180,160,120,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,33,34,29,15,0,0);
+		slot = new Array(2,5,6,3,1);
+		hosei = 16;
+		motion = "15*N+〆";
+		offset1 = 15+35+20-2;
+		offset2 = 2;
+		kankaku = 17;
+		shime = 15;
+		break;
+		case "细剑":
+		base = new Array(47,41,32,150,150,130,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(24,22,31,20,34,0,0);
+		slot = new Array(3,2,5,1,6);
+		hosei = 10;
+		motion = "(8+8)*N+〆";
+		offset1 = 9-3;
+		offset2 = 0;
+		kankaku = 16;
+		shime = 15;
+		break;
+		case "重手甲":
+		base = new Array(50,42,40,180,120,115,120);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,33,31,28,23,0,0);
+		slot = new Array(1,6,5,3,2);
+		hosei = 11;
+		motion = "4*N+〆";
+		offset1 = 23;
+		offset2 = 0;
+		kankaku = 5;
+		shime = "4+20";
+		break;
+		case "龙牙钩":
+		base = new Array(47,43,35,170,135,125,140);
+		qhhc = new Array(0,25,10,30,40,5,0);
+		up   = new Array(33,35,27,21,18,0,0);
+		slot = new Array(6,5,3,2,1);
+		hosei = 10;
+		motion = "(15+15)*N+〆";
+		offset1 = 17-14;
+		offset2 = 0;
+		kankaku = 64;
+		shime = "20";
+		break;
+		case "堕落":
+		base = new Array(49,43,33,150,145,130,145);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(24,23,18,33,29,0,0);
+		slot = new Array(2,3,1,6,5);
+		hosei = 10;
+		motion = "(1+1)*N+〆";
+		offset1 = 13-5;
+		offset2 = 0;
+		kankaku = 32;
+		shime = "1";
+		break;
+		case "镖":
+		motion = "未验证";
+		base = new Array(45,29,38,150,145,130,155);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(26,16,16,30,24,0,0);
+		slot = new Array(5,1,2,6,3);
+		hosei = 16;
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "青龙刀":
+		base = new Array(43,41,40,170,140,125,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(24,23,29,20,31,0,0);
+		slot = new Array(3,2,5,1,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "螺旋枪":
+		base = new Array(46,38,29,180,120,110,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,24,34,30,19,0,0);
+		slot = new Array(2,3,6,5,1);
+		hosei = 13;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "雷鸣枪":
+		base = new Array(46,47,39,180,135,125,145);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,22,20,30,32,0,0);
+		slot = new Array(1,3,2,5,6);
+		hosei = 10;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "火焰圏":
+		base = new Array(45,50,37,160,140,130,155);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,20,34,21,27,0,0);
+		slot = new Array(3,1,6,2,5);
+		hosei = 12;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "飞翔剑":
+		base = new Array(44,48,35,170,130,120,140);
+		qhhc = new Array(15,18,0,18,28,5,0);
+		up   = new Array(29,22,30,19,21,0,0);
+		slot = new Array(5,2,6,1,3);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "龙扇":
+		base = new Array(42,39,35,140,140,115,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(26,21,18,28,29,0,0);
+		slot = new Array(6,2,1,3,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双钺":
+		base = new Array(47,45,32,180,130,110,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(24,23,32,20,29,0,0);
+		slot = new Array(3,2,6,1,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "红龙刀":
+		base = new Array(53,49,36,160,120,125,135);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(31,16,23,31,18,0,0);
+		slot = new Array(6,1,3,5,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+   		case "长弓":
+		base = new Array(47,41,30,150,150,115,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(22,34,19,32,8,0,0);
+		slot = new Array(3,5,2,6,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+                case "飞丽爪":
+		base = new Array(46,33,34,150,160,135,160);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(26,20,26,31,19,0,0);
+		slot = new Array(5,1,3,6,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "大钺":
+		base = new Array(45,40,36,205,135,110,135);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,33,31,28,11,0,0);
+		slot = new Array(2,6,5,3,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "打球棍":
+		base = new Array(45,40,35,150,150,120,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(29,23,22,35,18,0,0);
+		slot = new Array(5,2,3,6,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双龙剑":
+		base = new Array(46,47,30,160,130,130,160);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,36,19,30,25,0,0);
+		slot = new Array(3,6,1,5,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "野太刀":
+		base = new Array(44,45,32,170,140,125,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(32,20,19,27,33,0,0);
+		slot = new Array(5,1,2,3,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "打双鞭":
+		base = new Array(47,49,30,180,125,105,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,19,31,30,25,0,0);
+		slot = new Array(2,1,6,5,3);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "旋击棍":
+		base = new Array(45,47,26,170,140,120,135);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(19,31,37,23,23,0,0);
+		slot = new Array(1,5,6,2,3);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "麒麟刀":
+		base = new Array(49,37,32,180,130,115,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,22,19,31,32,0,0);
+		slot = new Array(3,2,1,5,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "击剑":
+		base = new Array(40,40,35,160,125,130,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(21,33,24,30,17,0,0);
+		slot = new Array(2,6,3,5,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "月香鞭":
+		base = new Array(50,52,36,150,140,135,155);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,24,32,21,26,0,0);
+		slot = new Array(2,3,6,1,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "方天戟":
+		base = new Array(49,55,35,190,120,110,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(29,22,23,33,16,0,0);
+		slot = new Array(5,3,2,6,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "铁舟":
+		base = new Array(47,53,32,200,130,105,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,35,29,25,10,0,0);
+		slot = new Array(3,6,5,2,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "铁扇":
+		base = new Array(43,45,40,160,150,135,160);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(22,32,19,29,35,0,0);
+		slot = new Array(2,5,1,3,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双杖":
+		base = new Array(47,43,29,150,140,125,145);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,15,22,31,33,0,0);
+		slot = new Array(2,1,3,6,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "红莲笛":
+		base = new Array(41,37,33,150,165,135,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(26,32,31,9,25,0,0);
+		slot = new Array(3,6,5,1,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "波斗棍":
+		base = new Array(46,47,42,160,130,125,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(30,18,21,26,33,0,0);
+		slot = new Array(5,1,2,3,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "旋刃盘":
+		base = new Array(47,38,28,160,140,130,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,22,33,21,31,0,0);
+		slot = new Array(3,2,6,1,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "刺剑":
+		base = new Array(44,47,40,170,130,120,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(22,20,35,28,17,0,0);
+		slot = new Array(2,3,6,5,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "笔架叉":
+		base = new Array(44,33,39,150,150,130,150);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(28,15,28,23,28,0,0);
+		slot = new Array(6,1,3,2,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "短戟":
+		base = new Array(45,40,35,180,140,120,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(25,23,31,34,15,0,0);
+		slot = new Array(3,2,5,6,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "长刀":
+		base = new Array(47,40,38,190,130,105,125);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(32,20,21,27,32,0,0);
+		slot = new Array(5,1,2,3,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "锡杖":
+		base = new Array(42,38,42,160,160,115,130);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(20,23,22,32,31,0,0);
+		slot = new Array(1,3,2,5,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "打刀":
+		base = new Array(44,42,32,155,150,125,140);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(23,32,34,18,21,0,0);
+		slot = new Array(2,5,6,1,3);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "断月刃":
+		base = new Array(41,48,37,180,125,105,135);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(31,21,16,34,23,0,0);
+		slot = new Array(5,2,1,6,3);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "迅雷剑":
+		base = new Array(42,45,33,150,150,125,150);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(29,18,20,19,35,0,0);
+		slot = new Array(5,3,2,1,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "连弩炮":
+		base = new Array(46,41,27,150,130,110,140);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(19,35,22,17,29,0,0);
+		slot = new Array(3,6,2,1,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "龙枪":
+		base = new Array(39,38,31,160,145,125,150);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(23,33,34,29,15,0,0);
+		slot = new Array(2,5,6,3,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "溃棒":
+		base = new Array(49,55,35,190,130,100,135);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(31,18,23,31,16,0,0);
+		slot = new Array(6,2,3,5,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "导符":
+		base = new Array(47,49,38,140,170,115,145);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(23,18,30,33,21,0,0);
+		slot = new Array(3,1,5,6,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "飞刀":
+		base = new Array(46,47,27,190,120,130,140);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(26,18,22,28,34,0,0);
+		slot = new Array(3,1,2,5,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "手斧":
+		base = new Array(45,52,33,200,120,110,140);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(22,23,27,21,34,0,0);
+		slot = new Array(1,3,5,2,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "大剑":
+		base = new Array(51,48,37,160,130,110,120);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(35,21,16,27,31,0,0);
+		slot = new Array(6,2,1,3,5);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "双斩剑":
+		base = new Array(49,52,36,190,120,135,125);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(23,23,33,25,27,0,0);
+		slot = new Array(2,5,3,1,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "十字戟":
+		base = new Array(48,45,21,170,130,125,130);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(38,33,17,23,21,0,0);
+		slot = new Array(6,5,1,3,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "两刃枪":
+		base = new Array(45,52,45,150,140,130,140);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(23,32,36,33,27,0,0);
+		slot = new Array(1,3,6,5,2);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "刃弩":
+		base = new Array(54,43,42,135,150,130,150);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(30,22,34,26,38,0,0);
+		slot = new Array(3,2,5,1,6);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+		case "匕首":
+		base = new Array(57,49,23,120,170,140,130);
+		qhhc = new Array(15,10,15,10,10,10,0);
+		up   = new Array(40,32,20,37,17,0,0);
+		slot = new Array(6,3,2,5,1);
+		hosei = 0;
+		motion = "未验证";
+		offset1 = 0;
+		offset2 = 0;
+		kankaku = 0;
+		shime = "";
+		break;
+
+
+
+
+
+
+
+
+
+
+
+
+		default:
+		base = new Array(0,0,0,0,0,0,0);
+		qhhc = new Array(0,0,0,0,0,0,0);
+		up   = new Array(0,0,0,0,0,0,0);
+		slot = new Array(0,0,0,0,0);
+		break;
+	}
+}
+
+function calc(){
+	calc1();
+	calc2();
+	calc1();
+}
+function calc1()	{
+	buki_name = document.frm.buki.value;
+	
+	buki_init(buki_name);
+	
+	for(i=0;i<7;i++){
+		if(document.frm.rank[i].checked){
+			rank = document.frm.rank[i].value - 1;
+		}
+	}
+	
+	for(i=0;i<3;i++){
+		if(document.frm.up_k[i].checked){
+			up[0] += document.frm.up_k[i].value * 1;
+		}
+	}
+ 
+	for(i=0;i<3;i++){
+		if(document.frm.up_h[i].checked){
+			up[1] += document.frm.up_h[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<3;i++){
+		if(document.frm.up_b[i].checked){
+			up[2] += document.frm.up_b[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<3;i++){
+		if(document.frm.up_t[i].checked){
+			up[3] += document.frm.up_t[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<3;i++){
+		if(document.frm.up_m[i].checked){
+			up[4] += document.frm.up_m[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<9;i++){
+		if(document.frm.toku_k[i].checked){
+			up[0] += document.frm.toku_k[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<9;i++){
+		if(document.frm.toku_h[i].checked){
+			up[1] += document.frm.toku_h[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<9;i++){
+		if(document.frm.toku_b[i].checked){
+			up[2] += document.frm.toku_b[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<9;i++){
+		if(document.frm.toku_t[i].checked){
+			up[3] += document.frm.toku_t[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<9;i++){
+		if(document.frm.toku_m[i].checked){
+			up[4] += document.frm.toku_m[i].value * 1;
+		}
+	}
+ 
+	num = new Array(0,0,0,0,0,0,0);
+ 
+	for(i=0;i<6;i++){
+		if(document.frm.num_k[i].checked){
+			num[0] += document.frm.num_k[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<6;i++){
+		if(document.frm.num_h[i].checked){
+			num[1] += document.frm.num_h[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<6;i++){
+		if(document.frm.num_b[i].checked){
+			num[2] += document.frm.num_b[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<6;i++){
+		if(document.frm.num_t[i].checked){
+			num[3] += document.frm.num_t[i].value * 1;
+		}
+	}
+	
+	for(i=0;i<6;i++){
+		if(document.frm.num_m[i].checked){
+			num[4] += document.frm.num_m[i].value * 1;
+		}
+	}
+	densetsu = new Array(0,0,0,0,0,0,0);
+	
+	den_table = new Array(new Array(12,23,30),new Array(5,9,15),new Array(6,12,23),new Array(8,15,23));
+	
+	for(i=0;i<5;i++){
+		if(document.frm.den_l[i].checked){
+			den_l = i;
+		}
+	}
+ 
+	for(i=0;i<3;i++){
+		if(document.frm.den_t[i].checked){
+			den_t = document.frm.den_t[i].value;
+		}
+	}	
+	
+	if(den_l != 0){
+		if(den_l == 4){
+			for(i=0;i<5;i++){
+				densetsu[i] = 1;
+			}
+			if(document.frm.idou_t[0].checked == false){
+				densetsu[5] = 1;
+			}
+		}
+		else{
+			for(i=0;i<5;i++){
+				densetsu[i] = den_table[Math.floor((den_t % Math.pow(10, 5-i))/ Math.pow(10, 4-i))][den_l-1];
+			}
+			for(i=0;i<6;i++){
+				if(document.frm.idou_t[i].checked){
+					densetsu[5] = document.frm.idou_t[i].value * 1;
+				}
+			}
+		}
+	}
+	
+	
+	for(i=0;i<5;i++){
+		switch(document.frm.kai[i].value){
+		case "简改G基础":
+			base[0] += 4;
+			base[2] -= 4;			
+			break;
+		case "简改P基础":
+			base[1] += 6;
+			base[2] -= 4;			
+			break;
+		case "简改F基础":
+			base[0] -= 2;
+			base[1] -= 4;	
+			base[2] += 4;			
+			break;
+		case "简改T基础":
+			base[3] += 8;
+			base[4] -= 8;			
+			break;
+		case "简改W基础":
+			base[3] -= 8;
+			base[4] += 8;			
+			break;
+		case "简改移动":
+			base[0] -= 2;
+			base[1] -= 2;
+			base[2] -= 2;
+			base[5] += 2;
+			base[6] -= 2;			
+			break;
+		case "简改跳跃":
+			base[5] -= 1;
+			base[6] += 2;			
+			break;
+		case "真改G基础":
+			base[0] += 4;
+			base[2] -= 2;			
+			break;
+		case "真改P基础":
+			base[1] += 6;
+			base[2] -= 2;			
+			break;
+		case "真改F基础":
+			base[0] -= 1;
+			base[1] -= 2;	
+			base[2] += 4;			
+			break;
+		case "真改T基础":
+			base[3] += 8;
+			base[4] -= 4;			
+			break;
+		case "真改W基础":
+			base[3] -= 4;
+			base[4] += 8;			
+			break;
+		case "真改移动":
+			base[0] -= 1;
+			base[1] -= 1;
+			base[2] -= 1;
+			base[5] += 2;
+			base[6] -= 1;			
+			break;
+		case "真改跳跃":
+			base[3] -= 2;
+			base[4] -= 2;
+			base[6] += 2;			
+			break;
+		case "简改G上升":
+			up[0] += 5;
+			up[1] -= 2;
+			up[2] -= 2;
+			up[3] -= 2;
+			up[4] -= 2;			
+			break;
+		case "简改P上升":
+			up[0] -= 2;
+			up[1] += 8;
+			up[2] -= 2;
+			up[3] -= 2;
+			up[4] -= 2;			
+			break;
+		case "简改F上升":
+			up[0] -= 2;
+			up[1] -= 2;
+			up[2] += 5;
+			up[3] -= 2;
+			up[4] -= 2;		
+			break;
+		case "简改T上升":
+			up[0] -= 2;
+			up[1] -= 2;
+			up[2] -= 2;
+			up[3] += 10;
+			up[4] -= 2;			
+			break;
+		case "简改W上升":
+			up[0] -= 2;
+			up[1] -= 2;
+			up[2] -= 2;
+			up[3] -= 2;
+			up[4] += 10;			
+			break;
+		case "真改G上升":
+			up[0] += 5;
+			up[1] -= 1;
+			up[2] -= 1;
+			up[3] -= 1;
+			up[4] -= 1;		
+			break;
+		case "真改P上升":
+			up[0] -= 1;
+			up[1] += 8;
+			up[2] -= 1;
+			up[3] -= 1;
+			up[4] -= 1;			
+			break;
+		case "真改F上升":
+			up[0] -= 1;
+			up[1] -= 1;
+			up[2] += 5;
+			up[3] -= 1;
+			up[4] -= 1;	
+			break;
+		case "真改T上升":
+			up[0] -= 1;
+			up[1] -= 1;
+			up[2] -= 1;
+			up[3] += 10;
+			up[4] -= 1;		
+			break;
+		case "真改W上升":
+			up[0] -= 1;
+			up[1] -= 1;
+			up[2] -= 1;
+			up[3] -= 1;
+			up[4] += 10;			
+			break;
+		case "简改锻炼上限":
+			base[0] -= 2;
+			base[1] -= 3;
+			base[2] -= 2;
+			base[3] -= 4;
+			base[4] -= 4;			
+			break;
+		case "真改锻炼上限":
+			base[0] -= 1;
+			base[1] -= 2;
+			base[2] -= 1;
+			base[3] -= 2;
+			base[4] -= 2;			
+			break;
+		case "简改刻印":
+			base[0] -= 1;
+			base[1] -= 2;
+			base[2] -= 1;
+			base[3] -= 2;
+			base[4] -= 2;			
+			break;
+		default:
+		}
+	}
+ 
+	hosei += num[1];
+	
+	for(i=0;i<7;i++){
+		document.frm.base[i].value = base[i];
+	}
+	for(i=0;i<5;i++){
+		up[i] += (3 * rank);
+		document.frm.up[i].value =  up[i];
+		document.frm.slot[i].value =  slot[i];
+		
+	}
+	for(i=0;i<6;i++){
+		
+		document.frm.qhhc[i].value =  qhhc[i];
+	}
+	waku2 = (rank + 3) * 4
+	if(waku2 > 24)waku2 = 24;
+	waku = 0;
+	for(i=0;i<5;i++){
+		waku += (num[i] + 1) * num[i] / 2;
+		if(document.frm.kai[i].value == "简改锻炼上限" || document.frm.kai[i].value == "真改锻炼上限")
+		waku2 += 1; 
+	}
+	document.frm.waku.value = waku +"/"+ waku2;
+		
+	total = new Array(0,0,0,0,0,0,0);
+	
+	for(i=0;i<7;i++){
+		total1[i] = base[i] + up[i] * num[i] + densetsu[i];
+		
+			total[i] = total1[i]  +qhhc[i] + Math.floor(total2[i]*0.2);
+		
+		
+		document.frm.total[i].value = total[i];
+	}
+	
+	document.frm.hakai_h.value = hosei / 10;
+	
+	hakai_d = Math.floor(Math.floor(total[1] / 6) * hosei / 10) + 1;
+	
+	document.frm.hakai_d.value = hakai_d;
+	
+	kaisu_h = new Array(0,0,0,0,0);
+	
+	kaisu_h[0] =  Math.ceil(300 / hakai_d);
+	kaisu_h[1] =Math.ceil((Math.ceil(300/(kaisu_h[0]-1))-1)/hosei*10)*6-total[1];
+	kaisu_h[2] =Math.ceil((Math.ceil(300/(kaisu_h[0]-2))-1)/hosei*10)*6-total[1];
+	kaisu_h[3] =Math.ceil((Math.ceil(300/(kaisu_h[0]))-1)/hosei*10)*6-total[1]-1;
+	kaisu_h[4] =Math.ceil((Math.ceil(300/(kaisu_h[0]+1))-1)/hosei*10)*6-total[1]-1;
+	
+	for(i=0;i<5;i++){
+		document.frm.kaisu_h[i].value = kaisu_h[i];
+	}
+	
+	if(total[2]>=200){
+		hosei_b = total[2];
+	}
+	else {
+		hosei_b = total[2] + Math.floor((200 - total[2]) / 10);
+	}
+	
+	document.frm.hosei_b.value = hosei_b;
+	document.frm.t2.value = total[3];
+	document.frm.taikyu.value = hosei_b * total[3];
+	
+	for(i=0;i<3;i++){
+		document.frm.husui[i].value = Math.floor(num[3] / 2 )+ i + 1;
+		document.frm.kaihuku[i].value = (Math.floor(num[3] / 2 )+ i + 1) * hosei_b;
+	}	
+	
+	document.frm.motion.value = motion;
+	document.frm.shime.value = shime;
+	temp = total[4] - offset1;
+	kaisu_m = Math.ceil(temp / kankaku) + offset2;
+	document.frm.kaisu_m[0].value = kaisu_m;
+	document.frm.kaisu_m[1].value = (kaisu_m - offset2) * kankaku + offset1 + 1 - total[4];
+	document.frm.kaisu_m[2].value = (kaisu_m - offset2 + 1) * kankaku + offset1 + 1 - total[4];
+	document.frm.kaisu_m[3].value = (kaisu_m - offset2 - 1) * kankaku + offset1 - total[4];
+	document.frm.kaisu_m[4].value = (kaisu_m - offset2 - 2) * kankaku + offset1 - total[4];
+}
+ 
+function all_p(){
+	document.frm.up_k[2].checked = true;
+	document.frm.up_h[2].checked = true;
+	document.frm.up_b[2].checked = true;
+	document.frm.up_t[2].checked = true;
+	document.frm.up_m[2].checked = true;
+	calc();
+}
+ 
+function all_e(){
+	document.frm.up_k[1].checked = true;
+	document.frm.up_h[1].checked = true;
+	document.frm.up_b[1].checked = true;
+	document.frm.up_t[1].checked = true;
+	document.frm.up_m[1].checked = true;
+	calc();
+}
+ 
+function full(){
+	document.frm.toku_k[8].checked = true;
+	document.frm.toku_h[8].checked = true;
+	document.frm.toku_b[8].checked = true;
+	document.frm.toku_t[8].checked = true;
+	document.frm.toku_m[8].checked = true;
+	calc();
+}
+ 
+function toku_reset(){
+	document.frm.toku_k[0].checked = true;
+	document.frm.toku_h[0].checked = true;
+	document.frm.toku_b[0].checked = true;
+	document.frm.toku_t[0].checked = true;
+	document.frm.toku_m[0].checked = true;
+	calc();
+}
+ 
+function kkk(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改G基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kkh(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改P基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kkb(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改F基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kkt(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改T基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kkm(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改W基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kki(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改移动";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kkj(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改跳跃";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hkk(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改G基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hkh(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改P基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hkb(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改F基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hkt(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改T基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hkm(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改W基础";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hki(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改移动";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hkj(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改跳跃";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kjk(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改G上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kjh(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改P上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kjb(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改F上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kjt(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改T上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kjm(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改W上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kw(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改锻炼上限";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kk(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "简改刻印";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hjk(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改G上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hjh(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改P上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hjb(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改F上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hjt(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改T上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hjm(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改W上升";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hw(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改锻炼上限";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function hk(){
+	for(i=0;i<5;i++){
+		if(	document.frm.kai[i].value == "无"){
+			document.frm.kai[i].value = "真改刻印";
+			break;
+		}
+	}
+	calc();
+}
+ 
+function kai_del1(){
+	document.frm.kai[0].value = "无";
+	calc();
+}
+ 
+function kai_del2(){
+	document.frm.kai[1].value = "无";
+	calc();
+}
+ 
+function kai_del3(){
+	document.frm.kai[2].value = "无";
+	calc();
+}
+ 
+function kai_del4(){
+	document.frm.kai[3].value = "无";
+	calc();
+}
+ 
+function kai_del5(){
+	document.frm.kai[4].value = "无";
+	calc();
+}
+ 
+function kai_reset(){
+	for(i=0;i<5;i++){
+		document.frm.kai[i].value = "无";
+	}
+	calc();
+}
+ 
+function num_reset(){
+	document.frm.num_k[0].checked = true;
+	document.frm.num_h[0].checked = true;
+	document.frm.num_b[0].checked = true;
+	document.frm.num_t[0].checked = true;
+	document.frm.num_m[0].checked = true;
+	calc();
+}
+
+
+
+</script>
+ 
+</head>
+		<body>
+
+
+
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%">无双模计器 —《真·三国无双OnlineZ》</p>
+<div id="container">
+<div id="tj">
+<div class="box">
+		<div class="taiji" >
+			<div class="tj_1 tj_big1"></div>
+			<div class="tj_1 tj_big2"></div>
+			<div class="tj_2 tj_s1">
+				<div class="tj_ss tj_w"></div>
+			</div>
+			<div class="tj_2 tj_s2">
+				<div class="tj_ss tj_b"></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%">&nbsp;</p>
+		
+		<form name="frm">
+			<table style="MARGIN-BOTTOM: 0px; BORDER-COLLAPSE: collapse; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" bordercolor="black" border="2">
+				<tbody>
+					<tr>
+						<th rowspan="2" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">武器选择</p>
+							
+						</th>
+						<th rowspan="2" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">SLOT</p>
+						</th>
+						<th rowspan="2" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">基础值</p>
+						</th>
+						<th rowspan="2" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">强化</p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">合成</p>
+						</th>
+						<th colspan="2" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">上升值</p>
+						</th>
+						<th rowspan="1" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">上升特</p>
+						</th>
+						<th nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">強化数 
+								<input maxlength="2" size="6" value="0/24" name="waku"></p>
+						</th>
+						
+						<th nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">传说化</p>
+						</th>
+						<th colspan="5" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">改造</p>
+						</th>
+						
+					</tr>
+					<tr>
+						<th nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">&nbsp;</p>
+						</th>
+						<th nowrap="">
+							<table>
+								<th width="1%">-</th>
+								<th width="1%">=</th>
+								<th width="1%">+</th></table>
+						</th>
+						<th nowrap="">
+							<table align="center"><th width="1%">0</th>
+							<th width="1%">1</th>
+							<th width="1%">2</th>
+							<th width="1%">3</th>
+							<th width="1%">4</th>
+							<th width="1%">5</th>
+							<th width="1%">6</th>
+							<th width="1%">7</th>
+							<th width="1%">8</th></table>
+						</th>
+						<th nowrap="">
+							<table><th width="1%">0</th>
+							<th width="1%">1</th>
+							<th width="1%">2</th>
+							<th width="1%">3</th>
+							<th width="1%">4</th>
+							<th width="1%">5</th></table>
+						</th>
+						<th nowrap="">
+							
+							<table align="" border="0"><th width="1%">0</th>
+							<th width="1%">1</th>
+							<th width="1%">2</th>
+							<th width="1%">3</th>
+							<th width="1%">劣</th>
+							</table>
+						</th>
+						<th colspan="2" nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">简改</p>
+						</th>
+						<th colspan="2" nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">真改</p>
+						</th>
+						<th nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">改造列表</p>
+						</th>
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<select onclick="calc();" name="buki"> 
+									<option selected="" value="偃月刀">偃月刀</option> 
+									<option value="大斧">大斧</option> 
+									<option value="碎棒">碎棒</option> 
+									<option value="铁鞭">铁鞭</option> 
+									<option value="朴刀">朴刀</option> 
+									<option value="甲刀">甲刀</option> 
+									<option value="碎棍">碎棍</option> 
+									<option value="双鞭">双鞭</option> 
+									<option value="战斧">战斧</option> 
+									<option value="双戟">双戟</option> 
+									<option value="双剑">双剑</option> 
+									<option value="双锤">双锤</option> 
+									<option value="直枪">直枪</option> 
+									<option value="长棍">长棍</option> 
+									<option value="樱扇">樱扇</option> 
+									<option value="燕扇">燕扇</option> 
+									<option value="幻杖">幻杖</option> 
+									<option value="法杖">法杖</option> 
+									<option value="铁钩">铁钩</option> 
+									<option value="蛮拳">蛮拳</option> 
+									<option value="铁剑">铁剑</option> 
+									<option value="狱刀">狱刀</option> 
+									<option value="战盘">战盘</option> 
+									<option value="多节鞭">多节鞭</option> 
+									<option value="长双刀">长双刀</option> 
+									<option value="钩镰刀">钩镰刀</option> 
+									<option value="宝剑">宝剑</option> 
+									<option value="铁枪">铁枪</option> 
+									<option value="双节棍">双节棍</option> 
+									<option value="夏圏">夏圏</option> 
+									<option value="铁矛">铁矛</option> 
+									<option value="斩马刀">斩马刀</option> 
+									<option value="羽扇">羽扇</option> 
+									<option value="投弧刃">投弧刃</option> 
+									<option value="积刃剑">积刃剑</option> 
+									<option value="将剑">将剑</option> 
+									<option value="弧刀">弧刀</option> 
+									<option value="旋棍">旋棍</option> 
+									<option value="牙壁">牙壁</option> 
+									<option value="盘刀">盘刀</option> 
+									<option value="战戈">战戈</option> 
+									<option value="铁笛">铁笛</option> 
+									<option value="双刃剑">双刃剑</option> 
+									<option value="尖剑">尖剑</option> 
+									<option value="咒符">咒符</option> 
+									<option value="三尖枪">三尖枪</option> 
+									<option value="叉突矛">叉突矛</option> 
+									<option value="断戟">断戟</option> 
+									<option value="牙剑">牙剑</option> 
+									<option value="桃扇">桃扇</option> 
+									<option value="铁戟">铁戟</option> 
+									<option value="麟角刀">麟角刀</option> 
+									<option value="穿刃">穿刃</option> 
+									<option value="狼牙棒">狼牙棒</option> 
+									<option value="蛇剑">蛇剑</option> 
+									<option value="巨剑">巨剑</option> 
+									<option value="细剑">细剑</option> 
+									<option value="重手甲">重手甲</option> 
+									<option value="龙牙钩">龙牙钩</option> 
+									<option value="堕落">堕落</option> 
+									<option value="镖">镖</option> 
+									<option value="青龙刀">青龙刀</option> 
+									<option value="螺旋枪">螺旋枪</option> 
+									<option value="雷鸣枪">雷鸣枪</option> 
+									<option value="火焰圏">火焰圏</option>
+									<option value="飞翔剑">飞翔剑</option>
+									<option value="龙扇">龙扇</option>
+									<option value="双钺">双钺</option>
+									<option value="红龙刀">红龙刀</option>
+									<option value="长弓">长弓</option>
+									<option value="飞丽爪">飞丽爪</option>
+									<option value="大钺">大钺</option>
+									<option value="打球棍">打球棍</option>
+									<option value="双龙剑">双龙剑</option>
+ 									<option value="野太刀">野太刀</option>
+                         						<option value="打双鞭">打双鞭</option>
+									<option value="旋击棍">旋击棍</option>
+									<option value="麒麟刀">麒麟刀</option>
+									<option value="击剑">击剑</option>
+									<option value="月香鞭">月香鞭</option>
+									<option value="方天戟">方天戟</option>
+									<option value="铁舟">铁舟</option>
+									<option value="铁扇">铁扇</option>
+									<option value="双杖">双杖</option>
+									<option value="红莲笛">红莲笛</option>
+									<option value="波斗棍">波斗棍</option>
+									<option value="旋刃盘">旋刃盘</option>
+									<option value="刺剑">刺剑</option>
+									<option value="笔架叉">笔架叉</option>
+									<option value="短戟">短戟</option>
+									<option value="长刀">长刀</option>
+									<option value="锡杖">锡杖</option>
+									<option value="打刀">打刀</option>
+									<option value="断月刃">断月刃</option>
+									<option value="迅雷剑">迅雷剑</option>
+									<option value="连弩炮">连弩炮</option>
+									<option value="龙枪">龙枪</option>
+									<option value="溃棒">溃棒</option>
+									<option value="导符">导符</option>
+									<option value="飞刀">飞刀</option>
+									<option value="手斧">手斧</option>
+									<option value="大剑">大剑</option>
+									<option value="双斩剑">双斩剑</option>
+									<option value="十字戟">十字戟</option>
+									<option value="两刃枪">两刃枪</option>
+									<option value="刃弩">刃弩</option>
+									<option value="匕首">匕首</option>
+								</select> </p>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">攻击
+								<input maxlength="2" size="1" value="3" name="slot"></p>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="2" value="0" name="base"></p>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="up"></p>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<table>
+								<th width="1%"><input onclick="calc();" type="radio" value="-1" name="up_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="0" name="up_k"></th>
+								<th width="1%"><input onclick="calc();" checked="" type="radio" value="1" name="up_k"></th></table>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<table>
+								<th width="1%"><input onclick="calc();" checked="" type="radio" value="0" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="1" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="2" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="3" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="4" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="5" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="6" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="7" name="toku_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="8" name="toku_k"></th></table>
+						</td>
+						<td bgcolor="#ff9966" nowrap="">
+							<table><th width="1%"><input onclick="calc();" checked="" type="radio" value="0" name="num_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="1" name="num_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="2" name="num_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="3" name="num_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="4" name="num_k"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="5" name="num_k"></th></table>
+						</td>
+						
+						
+						<td nowrap="">
+							<table>
+								<td width="1%"><input onclick="calc();" checked="" type="radio" value="0" name="den_l"></td>
+								<td width="1%"><input onclick="calc();" type="radio" value="1" name="den_l"></td>
+								<td width="1%"><input onclick="calc();" type="radio" value="2" name="den_l"></td>
+								<td width="1%"><input onclick="calc();" type="radio" value="3" name="den_l"></td>
+								<td width="2%"><input onclick="calc();" type="radio" value="4" name="den_l"></td></table>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kkk();" type="button" value="G基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kjk();" type="button" value="G上升"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hkk();" type="button" value="G基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hjk();" type="button" value="G上升"></p>
+						</td>
+						<td rowspan="6" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">改造1
+							<input maxlength="2" size="10" value="无" name="kai">
+							<input onclick="kai_del1();" type="button" value="削除"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">改造2
+							<input maxlength="2" size="10" value="无" name="kai">
+							<input onclick="kai_del2();" type="button" value="削除"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">改造3
+							<input maxlength="2" size="10" value="无" name="kai">
+							<input onclick="kai_del3();" type="button" value="削除"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">改造4
+							<input maxlength="2" size="10" value="无" name="kai">
+							<input onclick="kai_del4();" type="button" value="削除"> 
+							</p><p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">改造5
+								<input maxlength="2" size="10" value="无" name="kai">
+								<input onclick="kai_del5();" type="button" value="削除"></p>
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center"><b>等级</b></p>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">破坏 
+								<input maxlength="2" size="1" value="2" name="slot"></p>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="2" value="0" name="base"></p>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="up"></p>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" type="radio" value="-1" name="up_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="0" name="up_h"></th>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="1" name="up_h"></th></table>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="6" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="7" name="toku_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="8" name="toku_h"></th></table>
+						</td>
+						<td bgcolor="#ffff66" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="num_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="num_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="num_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="num_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="num_h"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="num_h"></th></table>
+						</td>
+						
+						
+						<td nowrap="">
+							<table align="center">
+							<th width="20"><input onclick="calc();" id="den_t0" checked="" type="radio" value="112" name="den_t"></th> 
+								<td width="90" align="left"><label for="den_t0">尖晶(攻破)</label></td></table>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kkh();" type="button" value="P基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kjh();" type="button" value="P上升"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hkh();" type="button" value="P基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hjh();" type="button" value="P上升"></p>
+						</td>
+						
+					</tr>
+					<tr>
+						<td rowspan="5" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank1" type="radio" value="1" name="rank"> 
+								<label for="rank1">R1 </label></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank2" type="radio" value="2" name="rank"> 
+								<label for="rank2">R2</label></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank3" type="radio" value="3" name="rank"> 
+								<label for="rank3">R3</label></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank4" type="radio" value="4" name="rank"> 
+								<label for="rank4">R4</label></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank5" type="radio" value="5" name="rank"> 
+								<label for="rank5">R5</label></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank6" type="radio" value="6" name="rank"> 
+								<label for="rank6">R6</label></p>
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="calc();" id="rank7" checked="" type="radio" value="7" name="rank"> 
+								<label for="rank7">R7</label></p>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">防御 
+								<input maxlength="2" size="1" value="5" name="slot"></p>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="2" value="0" name="base"></p>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="up"></p>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" type="radio" value="-1" name="up_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="0" name="up_b"></th>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="1" name="up_b"></th></table>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="toku_b"></th>
+								
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="6" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="7" name="toku_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="8" name="toku_b"></th></table>
+						</td>
+						<td bgcolor="#00cccc" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="num_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="num_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="num_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="num_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="num_b"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="num_b"></th></table>
+						</td>
+						
+						
+						<td nowrap="">
+							<table align="center">
+								<th width="20"><input onclick="calc();" id="den_t1" type="radio" value="11002" name="den_t"></th>
+								<td width="90" align="left"><label for="den_t1">玉滴(防体)</label></td></table>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kkb();" type="button" value="F基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kjb();" type="button" value="F上升"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hkb();" type="button" value="F基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hjb();" type="button" value="F上升"></p>
+						</td>
+						
+					</tr>
+					<tr>
+						<td bgcolor="#6699ff" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">体力 
+								<input maxlength="2" size="1" value="1" name="slot"></p>
+						</td>
+						<td bgcolor="#6699ff" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="2" value="0" name="base"></p>
+						</td>
+						<td bgcolor="#6699ff" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td bgcolor="#6699ff" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="up"></p>
+						</td>
+						<td bgcolor="#6699ff" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" type="radio" value="-1" name="up_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="0" name="up_t"></th>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="1" name="up_t"></th></table>
+						</td>
+						<td bgcolor="#6699ff" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="toku_t"></th>
+
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="6" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="7" name="toku_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="8" name="toku_t"></th></table>
+						</td>
+						<td bgcolor="#6699ff" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="num_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="num_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="num_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="num_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="num_t"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="num_t"></th></table>
+						</td>
+						
+						
+						<td nowrap="">
+							<table align="center">
+								<th width="20"><input onclick="calc();" id="den_t2" type="radio" value="33333" name="den_t"></th>
+								<td width="90" align="left"><label for="den_t2">琉璃(平衡)</label></td></table>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kkt();" type="button" value="T基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kjt();" type="button" value="T上升"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hkt();" type="button" value="T基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hjt();" type="button" value="T上升"></p>
+						</td>
+						
+					</tr>
+					<tr>
+						<td bgcolor="#ff6699" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">无双 
+								<input maxlength="2" size="1" value="6" name="slot"></p>
+						</td>
+						<td bgcolor="#ff6699" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="2" value="0" name="base"></p>
+						</td>
+						<td bgcolor="#ff6699" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td bgcolor="#ff6699" nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="1" value="0" name="up"></p>
+						</td>
+						<td bgcolor="#ff6699" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" type="radio" value="-1" name="up_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="0" name="up_m"></th>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="1" name="up_m"></th></table>
+						</td>
+						<td bgcolor="#ff6699" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="6" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="7" name="toku_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="8" name="toku_m"></th></table>
+						</td>
+						<td bgcolor="#ff6699" nowrap="">
+							<table>
+								<th width="20"><input onclick="calc();" checked="" type="radio" value="0" name="num_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="1" name="num_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="2" name="num_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="3" name="num_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="4" name="num_m"></th>
+								<th width="20"><input onclick="calc();" type="radio" value="5" name="num_m"></th></table>
+						</td>
+						
+						
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center"><b>移动特</b></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kkm();" type="button" value="W基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kjm();" type="button" value="W上升"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hkm();" type="button" value="W基础"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hjm();" type="button" value="W上升"></p>
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">移动</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="2" value="0" name="base"></p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">&nbsp;</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="all_p();" type="button" value="ALL +"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="full();" type="button" value="满特"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="num_reset();" type="button" value="归 0"></p>
+						</td>
+						
+						
+						<td nowrap="">
+							<table align="center"><th width="1%">0</th>
+								<th width="1%">1</th>
+								<th width="1%">2</th>
+								<th width="1%">3</th>
+								<th width="1%">4</th>
+								<th width="1%">5</th></table>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kki();" type="button" value="移动"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kw();" type="button" value="锻炼"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hki();" type="button" value="移动"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hw();" type="button" value="锻炼"></p>
+						</td>
+						
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">跳跃</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="2" value="0" name="base"></p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="1" value="0" name="qhhc"></p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">&nbsp;</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input onclick="all_e();" type="button" value="ALL ="></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="toku_reset();" type="button" value="归 0"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">&nbsp;</p>
+						</td>
+						
+						
+						<td nowrap="">
+							<table>
+								<th width="1%"><input onclick="calc();" checked="" type="radio" value="0" name="idou_t"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="1" name="idou_t"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="2" name="idou_t"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="3" name="idou_t"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="4" name="idou_t"></th>
+								<th width="1%"><input onclick="calc();" type="radio" value="5" name="idou_t"></th></table>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kkj();" type="button" value="跳跃"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kk();" type="button" value="刻印"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hkj();" type="button" value="跳跃"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="hk();" type="button" value="刻印"></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">
+								<input onclick="kai_reset();" type="button" value="改造清空"></p>
+						</td>
+						
+					</tr>
+				</tbody>
+			</table>
+			<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="left">&nbsp;</p>
+			<table style="MARGIN-BOTTOM: 0px; BORDER-COLLAPSE: collapse; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" bordercolor="black" border="2">
+				<tbody>
+					<tr>
+						<td rowspan="8" nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center"><b>结果</b></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">&nbsp;</p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center"><b>合计值</b></p>
+						</td>
+						<td colspan="2" nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center"><b>模拟锻炼度</b></p>
+						</td>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center"><b>参照图</b></p>
+						</td>
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">攻击</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="3" size="5" value="0" name="total"></p>
+						</td>
+						<td>
+							<span style="padding-left:112px">|85</span>
+							<span style="padding-left:68px">|170</span>
+							<span style="padding-left:60px">|255</span>
+							<span style="padding-left:60px">|340</span>	
+							<div id="g"></div>
+						</td>
+						<td>
+							<input type="text" id="amount" style="border:0; color:black; font-weight:bold;" size=2;>
+						</td>
+						<td rowspan="5">
+						<img src="js\02.jpg" alt="">
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">破坏</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="5" value="0" name="total"></p>
+						</td>
+						<td>
+							<span style="padding-left:112px">|85</span>
+							<span style="padding-left:68px">|170</span>
+							<span style="padding-left:60px">|255</span>
+							<span style="padding-left:60px">|340</span>
+							<div id="p"></div>
+						</td>
+						<td>
+							<input type="text" id="phl" style="border:0; color:black; font-weight:bold;"size=2;>
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">防御</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="5" value="0" name="total"></p>
+						</td>
+						<td>
+							<span style="padding-left:112px">|85</span>
+							<span style="padding-left:68px">|170</span>
+							<span style="padding-left:60px">|255</span>
+							<span style="padding-left:60px">|340</span>							
+							<div id="f"></div>
+						</td>
+						<td>
+							<input type="text" id="fyl" style="border:0; color:black; font-weight:bold;"size=2;>
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">体力</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="5" value="0" name="total"></p>
+						</td>
+						<td>
+							<span style="padding-left:112px">|100</span>
+							<span style="padding-left:60px">|200</span>
+							<span style="padding-left:60px">|300</span>
+							<span style="padding-left:60px">|400</span>
+							<div id="t"></div>
+						</td>
+						<td>
+							<input type="text" id="tl" style="border:0; color:black; font-weight:bold;"size=2;>
+						</td>
+
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">无双</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="5" value="0" name="total"></p>
+						</td>
+						<td>
+							<span style="padding-left:112px">|100</span>
+							<span style="padding-left:60px">|200</span>
+							<span style="padding-left:60px">|300</span>
+							<span style="padding-left:60px">|400</span>
+							<div id="w"></div>
+						</td>
+						<td>
+							<input type="text" id="ws" style="border:0; color:black; font-weight:bold;"size=2;>
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">移动</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="5" value="0" name="total"></p>
+						</td>
+						
+						<td rowspan="2" colspan="3">
+						</td>
+						
+					</tr>
+					<tr>
+						<td nowrap="">
+							<p style="LINE-HEIGHT: 150%" align="center">跳跃</p>
+						</td>
+						<td nowrap="">
+							<p style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 100%" align="center">
+								<input maxlength="2" size="5" value="0" name="total"></p>
+						</td>
+						
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		
+
+<p>Last Update 2018</p>
+</form>
+</body></html>
